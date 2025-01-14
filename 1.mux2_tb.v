@@ -1,13 +1,13 @@
 `timescale 1ns / 1ns
 
-module mux1_tb();
+module mux2_tb();
 
 reg S0;
 reg S1;
 reg S2;
 
 wire mux2_out;
-mux1 mux1_inst0(
+mux1 mux2_inst0(
   .a(S0),
   .b(S1),
   .sel(S2),
