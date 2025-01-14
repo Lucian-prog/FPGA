@@ -1,4 +1,4 @@
-module mux1(
+module mux2(
   a,
   b,
   sel,
