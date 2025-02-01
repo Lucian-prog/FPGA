@@ -1,0 +1,50 @@
+module top_pll_tb;
+    reg sys_clk;
+    reg reset;
+    reg A;
+    wire B;
+    wire [31:0] freq;
+
+    // 用于生成 A 信号的半周期，单位 ns
+    real A_half_period;
+
+    // 实例化顶层 PLL 模块
+    top_pll uut (
+        .sys_clk(sys_clk),
+        .reset(reset),
+        .A(A),
+        .B(B),
+        .freq(freq)
+    );
+    
+    // 生成 50MHz 系统时钟，周期20ns
+    initial begin
+        sys_clk = 0;
+        forever #10 sys_clk = ~sys_clk;
+    end
+
+    // 生成输入信号 A，初始频率 200kHz（半周期2500ns），后切换为240kHz
+    initial begin
+        A_half_period = 2500.0; // 200kHz
+        A = 0;
+        forever begin
+            #(A_half_period) A = ~A;
+        end
+    end
+
+    // 驱动复位和切换输入 A 信号频率
+    initial begin
+        reset = 1;
+        #100;
+        reset = 0;
+        
+        // 运行150ms后切换 A 信号频率为240kHz（半周期约2083ns）
+        #150_000_000;
+        $display("Time %t: Changing input A frequency to 240kHz", $time);
+        A_half_period = 2083.0;
+        
+        // 再运行150ms后结束仿真
+        #150_000_000;
+        $stop;
+    end
+endmodule
