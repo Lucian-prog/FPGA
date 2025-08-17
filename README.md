@@ -5,3 +5,4 @@
 3. led_twinkle: 时序逻辑计数器
 4. module m_sequence_8bit m序列发生器
 5. PLL 锁相环
+6. UART接口
