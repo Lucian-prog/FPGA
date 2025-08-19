@@ -6,3 +6,4 @@
 4. module m_sequence_8bit m序列发生器
 5. PLL 锁相环
 6. UART接口
+7. 按键消抖（1，2，3段）
