@@ -2,7 +2,6 @@
 
 module spi_master_tb;
   localparam DATA_W = 8;
-  localparam DIV = 4;
   localparam CLK_PERIOD = 10;
 
   reg                 clk;
@@ -10,6 +9,7 @@ module spi_master_tb;
   reg                 start;
   reg  [DATA_W-1:0]   tx_data;
   reg                 miso;
+  reg                 sclk_in;
   wire                sclk;
   wire                cs_n;
   wire                mosi;
@@ -21,10 +21,9 @@ module spi_master_tb;
   integer             timeout;
 
   spi_master #(
-    .DATA_W(DATA_W),
-    .DIV(DIV)
+    .DATA_W(DATA_W)
   ) dut (
-    .clk(clk),
+    .sclk_in(sclk_in),
     .rst_n(rst_n),
     .start(start),
     .tx_data(tx_data),
@@ -38,6 +37,7 @@ module spi_master_tb;
   );
 
   always #(CLK_PERIOD/2) clk = ~clk;
+  always #(CLK_PERIOD/2) sclk_in = ~sclk_in;
 
   // Simple slave model: update MISO on falling edge (Mode 0)
   always @(negedge sclk) begin
@@ -49,6 +49,7 @@ module spi_master_tb;
 
   initial begin
     clk = 0;
+    sclk_in = 0;
     rst_n = 0;
     start = 0;
     tx_data = 8'hA5;
