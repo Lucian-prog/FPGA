@@ -21,6 +21,9 @@
 - Use 2-space indentation and keep line length reasonable for readability.
 - Prefer lowercase file and module names with underscores (for example, `uart_tx.v`, `gray_converter.v`).
 - Keep parameters and signal names descriptive; avoid single-letter names except for simple data paths.
+- Prefer straightforward, readable logic; avoid overly defensive ternaries like `(DIV <= 2) ? 1 : $clog2(DIV)`.
+- Allow direct assignments such as `cnt <= 0` when they improve clarity.
+- Minimize complex nested or multi-branch ternary expressions.
 
 ## Testing Guidelines
 
