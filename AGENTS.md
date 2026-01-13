@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-- Each learning module lives in a numbered folder (for example, `1. mux2`, `6. UART`, `10. dual_port_ram`).
+- Each learning module lives in a numbered folder (for example, `01. mux2`, `06. UART`, `10. dual_port_ram`).
 - Verilog sources are stored directly in each module folder as `.v` files.
 - Testbenches follow the `_tb.v` suffix (for example, `mux2_tb.v`, `uart_tx_tb.v`).
 - Constraint files appear as `.xdc` alongside the module they target.
@@ -12,7 +12,7 @@
 
 - No build scripts are defined in this repo. Use your FPGA toolchain to synthesize or simulate each module.
 - Example simulation with Icarus Verilog (if installed):
-  `iverilog -g2012 -s mux2_tb -o mux2_tb.out "1. mux2/mux2.v" "1. mux2/mux2_tb.v"`
+  `iverilog -g2012 -s mux2_tb -o mux2_tb.out "01. mux2/mux2.v" "01. mux2/mux2_tb.v"`
 - Example run with `vvp`:
   `vvp mux2_tb.out`
 
