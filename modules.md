@@ -16,6 +16,7 @@ Use this file to track module status and quick references.
 | gray_converter | `09. gray_converter` | draft | 2025-12-13 | not_run |
 | spi_master | `12. spi_master` | draft | 2026-01-13 | not_run |
 | i2c_master | `13. i2c_master` | draft | 2026-01-13 | not_run |
+| crc16 | `14. crc16` | draft | 2026-01-16 | not_run |
 
 Status values: `draft`, `needs_test`, `done`
 Simulation values: `not_run`, `pass`, `fail`
