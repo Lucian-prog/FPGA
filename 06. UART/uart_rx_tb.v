@@ -22,6 +22,8 @@ initial clk=1;
 always #10 clk=~clk;
 
 initial begin
+    $dumpfile("uart_rx_tb.vcd");
+    $dumpvars(0, uart_rx_tb);
     rst_n=0;
     #201;
     rst_n=1;
@@ -88,6 +90,8 @@ initial begin
     uart_rx=1;
     #(5208*20);
     uart_rx=1;
-  $stop;
+    #(5208*20*5);
+    $display("[INFO] uart_rx 仿真完成，请查看 VCD 波形确认 rx_data");
+    $finish;
 end
 endmodule

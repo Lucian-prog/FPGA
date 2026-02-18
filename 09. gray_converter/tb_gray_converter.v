@@ -20,6 +20,8 @@ module gray_converter_tb;
 
     //always #5  clk = ! clk ;
     initial begin
+        $dumpfile("tb_gray_converter.vcd");
+        $dumpvars(0, gray_converter_tb);
         bin_in = 0;
         gray_in=0;
         #10;

@@ -30,11 +30,14 @@ module div_tb;
 //always #5  clk = ! clk ;
     always #5 clk = ~clk;
     initial begin
+        $dumpfile("div_tb.vcd");
+        $dumpvars(0, div_tb);
         rst_n=0;
         clk=0;
         #20;
         rst_n=1;
         #20000;
-        $stop;
+        $display("[PASS] div 仿真完成，请查看 div_tb.vcd 波形（DIV4/DIV5波形）");
+        $finish;
     end
 endmodule

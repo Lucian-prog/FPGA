@@ -24,8 +24,10 @@ module m_sequence_tb;
 
     // 测试过程
     initial begin
-        // 初始化
+    // 初始化
         rst_n = 0;
+        $dumpfile("m_sequence_8bit_tb.vcd");
+        $dumpvars(0, m_sequence_tb);
         #10;
         rst_n = 1;
         #1000;
