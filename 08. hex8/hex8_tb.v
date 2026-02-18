@@ -19,6 +19,8 @@ module digital_tube_tb;
   initial clk=1;
 //always #5  clk = ! clk ;
   initial begin
+    $dumpfile("hex8_tb.vcd");
+    $dumpvars(0, digital_tube_tb);
     rst_n=0;
     Disp_Data = 32'h12345678; // Example data
     #201;
@@ -26,7 +28,8 @@ module digital_tube_tb;
     #2000000;
     Disp_Data = 32'h9abcdef;
     #2000000;
-    $stop;
+    $display("[PASS] hex8 (digital_tube) 仿真完成，请查看 hex8_tb.vcd 波形");
+    $finish;
   end
   always #5 clk = !clk; // Clock generation
 endmodule

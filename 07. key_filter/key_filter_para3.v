@@ -31,7 +31,7 @@ module key_filter_para3 (
     );
 
     // 消抖时间参数 (以50MHz时钟为例，20ms)
-    localparam DEBOUNCE_TIME = 20'd1_000_000;
+    parameter DEBOUNCE_TIME = 20'd1_000_000;
 
     // 状态机状态定义
     localparam S_IDLE        = 2'b00;    // 空闲状态

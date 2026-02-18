@@ -28,7 +28,7 @@ module key_filter (
 );
 
   // 消抖时间参数 (20ms at 50MHz clock)
-  localparam DEBOUNCE_TIME = 20'd1000000;
+  parameter DEBOUNCE_TIME = 20'd1000000;
   
   reg [1:0] r_key;
 
