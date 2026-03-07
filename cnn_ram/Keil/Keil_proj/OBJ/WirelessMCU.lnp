@@ -1,0 +1,14 @@
+--cpu Cortex-M0
+"..\obj\system_cmsdk_cm0.o"
+"..\obj\system.o"
+"..\obj\syg_m0_gpio.o"
+"..\obj\syg_m0_uart.o"
+"..\obj\syg_m0_printk.o"
+"..\obj\syg_m0_dma.o"
+"..\obj\main.o"
+"..\obj\syg_m0_it.o"
+"..\obj\startup_cmsdk_cm0.o"
+--library_type=microlib --strict --scatter "..\OBJ\WirelessMCU.sct"
+--entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\WirelessMCU.map" -o ..\OBJ\WirelessMCU.axf

@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xEA074E18
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                                                                                     Checksum
+0x00000000    0x0015ED73    Feb 27 22:55:19 2023    E:/Workspace/SoC_Design/Cortex_M0/SoC+DMA/CM0_Proj/CM0_Proj.runs/impl_1/CortexM0_SoC.bit    0x00DED4A4
+File Checksum Total                                                                                                                             0x00DED4A4

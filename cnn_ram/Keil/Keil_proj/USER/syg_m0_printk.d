@@ -1,0 +1,13 @@
+.\syg_m0_printk.o: ..\HARDWARE\SYG_M0_printk.c
+.\syg_m0_printk.o: ..\HARDWARE\SYG_M0_printk.h
+.\syg_m0_printk.o: ..\SYSTEM\CMSDK_CM0.h
+.\syg_m0_printk.o: ..\CORE\core_cm0.h
+.\syg_m0_printk.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\syg_m0_printk.o: ..\CORE\core_cmInstr.h
+.\syg_m0_printk.o: ..\CORE\core_cmFunc.h
+.\syg_m0_printk.o: D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h
+.\syg_m0_printk.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\syg_m0_printk.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\syg_m0_printk.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\syg_m0_printk.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\syg_m0_printk.o: ..\HARDWARE\SYG_M0_uart.h

@@ -1,0 +1,927 @@
+
+*** Running vivado
+    with args -log CortexM0_SoC.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CortexM0_SoC.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Mon Oct  6 22:14:54 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source CortexM0_SoC.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 518.496 ; gain = 211.766
+Command: synth_design -top CortexM0_SoC -part xc7z020clg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34880
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1250.371 ; gain = 498.738
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10940] macro 'TRN_IDLE' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:117]
+WARNING: [Synth 8-10940] macro 'TRN_BUSY' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:118]
+WARNING: [Synth 8-10940] macro 'TRN_NONSEQ' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:119]
+WARNING: [Synth 8-10940] macro 'TRN_SEQ' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:120]
+WARNING: [Synth 8-10940] macro 'BUR_SINGLE' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:123]
+WARNING: [Synth 8-10940] macro 'BUR_INCR' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:124]
+WARNING: [Synth 8-10940] macro 'BUR_WRAP4' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:125]
+WARNING: [Synth 8-10940] macro 'BUR_INCR4' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:126]
+WARNING: [Synth 8-10940] macro 'BUR_WRAP8' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:127]
+WARNING: [Synth 8-10940] macro 'BUR_INCR8' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:128]
+WARNING: [Synth 8-10940] macro 'BUR_WRAP16' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:129]
+WARNING: [Synth 8-10940] macro 'BUR_INCR16' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:130]
+INFO: [Synth 8-11241] undeclared symbol 'dma_psel', assumed default net type 'wire' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:620]
+INFO: [Synth 8-11241] undeclared symbol 'dma_prdata', assumed default net type 'wire' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:621]
+INFO: [Synth 8-11241] undeclared symbol 'dma_pready', assumed default net type 'wire' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:622]
+INFO: [Synth 8-11241] undeclared symbol 'dma_pslverr', assumed default net type 'wire' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:623]
+INFO: [Synth 8-6157] synthesizing module 'CortexM0_SoC' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:2]
+INFO: [Synth 8-6157] synthesizing module 'cortexm0ds_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cortexm0ds_logic.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'cortexm0ds_logic' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cortexm0ds_logic.v:27]
+WARNING: [Synth 8-7071] port 'CODENSEQ' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'CODEHINTDE' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'SPECHTRANS' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'TDO' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'nTDOEN' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'DBGRESTARTED' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'HALTED' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'TXEV' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'LOCKUP' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'GATEHCLK' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'SLEEPDEEP' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'WAKEUP' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'WICSENSE' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'WICENACK' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r0_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r1_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r2_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r3_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r4_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r5_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r6_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r7_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r8_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r9_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r10_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r11_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r12_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_r14_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_msp_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_psp_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_pc_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_apsr_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_tbit_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_ipsr_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_control_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7071] port 'vis_primask_o' of module 'cortexm0ds_logic' is unconnected for instance 'u_logic' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+WARNING: [Synth 8-7023] instance 'u_logic' of module 'cortexm0ds_logic' has 79 connections declared, but only 43 given [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:87]
+INFO: [Synth 8-6157] synthesizing module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1.v:46]
+INFO: [Synth 8-6157] synthesizing module 'AHB_Input_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:32]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:417]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_Input_L1' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:32]
+INFO: [Synth 8-6157] synthesizing module 'AHB_Decoder_L1S0' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S0.v:36]
+INFO: [Synth 8-6157] synthesizing module 'AHB_BusMatrix_3x6_L1_default_slave' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1_default_slave.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_BusMatrix_3x6_L1_default_slave' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1_default_slave.v:31]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S0.v:311]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_Decoder_L1S0' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S0.v:36]
+INFO: [Synth 8-6157] synthesizing module 'AHB_Decoder_L1S1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S1.v:36]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S1.v:311]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_Decoder_L1S1' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S1.v:36]
+INFO: [Synth 8-6157] synthesizing module 'AHB_Decoder_L1S2' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S2.v:36]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S2.v:311]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_Decoder_L1S2' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S2.v:36]
+INFO: [Synth 8-6157] synthesizing module 'AHB_Output_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Output_L1.v:35]
+INFO: [Synth 8-6157] synthesizing module 'AHB_Arbiter_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Arbiter_L1.v:35]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Arbiter_L1.v:172]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Arbiter_L1.v:175]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_Arbiter_L1' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Arbiter_L1.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_Output_L1' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Output_L1.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_BusMatrix_3x6_L1' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1.v:46]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESPS0' does not match port width (2) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:299]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERM0' does not match port width (4) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:348]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERM1' does not match port width (4) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:368]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERM2' does not match port width (4) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:387]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERM3' does not match port width (4) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:406]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERM4' does not match port width (4) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:425]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERM5' does not match port width (4) of module 'AHB_BusMatrix_3x6_L1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:444]
+INFO: [Synth 8-6157] synthesizing module 'AHB_DMAC_Config' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC_Config.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_DMAC_Config' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC_Config.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'HRESP' does not match port width (1) of module 'AHB_DMAC_Config' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:483]
+WARNING: [Synth 8-689] width (2) of port connection 'HMASTERC' does not match port width (1) of module 'AHB_DMAC_Config' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:484]
+INFO: [Synth 8-6157] synthesizing module 'AHB_DMAC' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AHB_DMAC' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'HRESPD' does not match port width (1) of module 'AHB_DMAC' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:508]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_ram' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_ram.v:48]
+	Parameter MEM_TYPE bound to: 2 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter filename bound to: C:/Users/SYG/Desktop/SoC+DMA/Keil_proj/USER/WirelessMCU.hex - type: string 
+	Parameter WS_N bound to: 0 - type: integer 
+	Parameter WS_S bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_to_sram' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_sram.v:26]
+	Parameter AW bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_to_sram' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_sram.v:26]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_fpga_sram' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_fpga_sram.v:27]
+	Parameter AW bound to: 14 - type: integer 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/Cortex_M0/Keil/Keil_proj/USER/WirelessMCU.hex'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_fpga_sram.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_fpga_sram' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_fpga_sram.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_ram' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_ram.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'HADDR' does not match port width (16) of module 'cmsdk_ahb_ram' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:531]
+WARNING: [Synth 8-689] width (32) of port connection 'HADDR' does not match port width (16) of module 'cmsdk_ahb_ram' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:559]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:26]
+	Parameter INCLUDE_IRQ_SYNCHRONIZER bound to: 0 - type: integer 
+	Parameter INCLUDE_APB_TIMER0 bound to: 1 - type: integer 
+	Parameter INCLUDE_APB_TIMER1 bound to: 1 - type: integer 
+	Parameter INCLUDE_APB_DUALTIMER0 bound to: 1 - type: integer 
+	Parameter APB_EXT_PORT3_ENABLE bound to: 0 - type: integer 
+	Parameter INCLUDE_APB_UART0 bound to: 1 - type: integer 
+	Parameter INCLUDE_APB_UART1 bound to: 1 - type: integer 
+	Parameter APB_EXT_PORT6_ENABLE bound to: 0 - type: integer 
+	Parameter APB_EXT_PORT7_ENABLE bound to: 0 - type: integer 
+	Parameter INCLUDE_APB_WATCHDOG bound to: 1 - type: integer 
+	Parameter APB_EXT_PORT9_ENABLE bound to: 0 - type: integer 
+	Parameter BE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_timer' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v:41]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v:155]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v:164]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v:201]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_timer' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v:41]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_dualtimers' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers.v:31]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers.v:197]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers.v:227]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_dualtimers_frc' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers_frc.v:32]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers_frc.v:290]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_dualtimers_frc' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers_frc.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_dualtimers' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers.v:31]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_watchdog' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v:29]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v:249]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v:270]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v:272]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_watchdog_frc' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog_frc.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_watchdog_frc' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog_frc.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_watchdog' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v:29]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_uart' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_uart.v:53]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_uart.v:260]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_uart.v:271]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_uart' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_uart.v:53]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_to_apb' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_apb.v:31]
+	Parameter ADDRWIDTH bound to: 16 - type: integer 
+	Parameter REGISTER_RDATA bound to: 1 - type: integer 
+	Parameter REGISTER_WDATA bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_to_apb' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_apb.v:31]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_apb_slave_mux' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_slave_mux.v:26]
+	Parameter PORT0_ENABLE bound to: 1 - type: integer 
+	Parameter PORT1_ENABLE bound to: 1 - type: integer 
+	Parameter PORT2_ENABLE bound to: 1 - type: integer 
+	Parameter PORT3_ENABLE bound to: 0 - type: integer 
+	Parameter PORT4_ENABLE bound to: 1 - type: integer 
+	Parameter PORT5_ENABLE bound to: 1 - type: integer 
+	Parameter PORT6_ENABLE bound to: 0 - type: integer 
+	Parameter PORT7_ENABLE bound to: 0 - type: integer 
+	Parameter PORT8_ENABLE bound to: 1 - type: integer 
+	Parameter PORT9_ENABLE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_slave_mux' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_slave_mux.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_apb_subsystem' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:26]
+WARNING: [Synth 8-689] width (32) of port connection 'HADDR' does not match port width (16) of module 'cmsdk_apb_subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:600]
+WARNING: [Synth 8-689] width (16) of port connection 'PADDR' does not match port width (12) of module 'cmsdk_apb_subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:615]
+WARNING: [Synth 8-689] width (1) of port connection 'ext3_prdata' does not match port width (32) of module 'cmsdk_apb_subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:621]
+WARNING: [Synth 8-7071] port 'uart1_rxd' of module 'cmsdk_apb_subsystem' is unconnected for instance 'APB_Subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:596]
+WARNING: [Synth 8-7071] port 'uart1_txd' of module 'cmsdk_apb_subsystem' is unconnected for instance 'APB_Subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:596]
+WARNING: [Synth 8-7071] port 'uart1_txen' of module 'cmsdk_apb_subsystem' is unconnected for instance 'APB_Subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:596]
+WARNING: [Synth 8-7071] port 'timer0_extin' of module 'cmsdk_apb_subsystem' is unconnected for instance 'APB_Subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:596]
+WARNING: [Synth 8-7071] port 'timer1_extin' of module 'cmsdk_apb_subsystem' is unconnected for instance 'APB_Subsystem' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:596]
+WARNING: [Synth 8-7023] instance 'APB_Subsystem' of module 'cmsdk_apb_subsystem' has 49 connections declared, but only 44 given [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:596]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_gpio' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_gpio.v:24]
+	Parameter ALTERNATE_FUNC_MASK bound to: 16'b0000000000000000 
+	Parameter ALTERNATE_FUNC_DEFAULT bound to: 16'b0000000000000000 
+	Parameter BE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_to_iop' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_iop.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_to_iop' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_iop.v:28]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_iop_gpio' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:46]
+	Parameter ALTERNATE_FUNC_MASK bound to: 16'b0000000000000000 
+	Parameter ALTERNATE_FUNC_DEFAULT bound to: 16'b0000000000000000 
+	Parameter BE bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:150]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:153]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:179]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_iop_gpio' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_gpio' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_gpio.v:24]
+WARNING: [Synth 8-689] width (32) of port connection 'HADDR' does not match port width (12) of module 'cmsdk_ahb_gpio' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:681]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_eg_slave' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:28]
+	Parameter ADDRWIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_eg_slave_interface' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_interface.v:27]
+	Parameter ADDRWIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_interface.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_eg_slave_interface' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_interface.v:27]
+INFO: [Synth 8-6157] synthesizing module 'cmsdk_ahb_eg_slave_reg' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v:29]
+	Parameter ADDRWIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v:189]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v:193]
+INFO: [Synth 8-226] default block is never used [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v:202]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_eg_slave_reg' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v:29]
+WARNING: [Synth 8-689] width (32) of port connection 'cnn_data_in' does not match port width (8) of module 'cmsdk_ahb_eg_slave_reg' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:115]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:120]
+INFO: [Synth 8-6157] synthesizing module 'cnn_top' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/new/cnn_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'conv1_layer' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_layer.v:17]
+INFO: [Synth 8-6157] synthesizing module 'conv1_buf' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_buf.v:18]
+	Parameter WIDTH bound to: 28 - type: integer 
+	Parameter HEIGHT bound to: 28 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv1_buf' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_buf.v:18]
+INFO: [Synth 8-6157] synthesizing module 'conv1_calc' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:18]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv1_weight_1.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:42]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv1_weight_2.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:43]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv1_weight_3.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:44]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv1_bias.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'conv1_calc' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'conv1_layer' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_layer.v:17]
+INFO: [Synth 8-6157] synthesizing module 'maxpool_relu' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/maxpool_relu.v:19]
+	Parameter CONV_BIT bound to: 12 - type: integer 
+	Parameter HALF_WIDTH bound to: 12 - type: integer 
+	Parameter HALF_HEIGHT bound to: 12 - type: integer 
+	Parameter HALF_WIDTH_BIT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'maxpool_relu' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/maxpool_relu.v:19]
+INFO: [Synth 8-6157] synthesizing module 'conv2_layer' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_layer.v:17]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_bias.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_layer.v:434]
+INFO: [Synth 8-6157] synthesizing module 'conv2_buf' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_buf.v:17]
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter HEIGHT bound to: 12 - type: integer 
+	Parameter DATA_BITS bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv2_buf' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_buf.v:17]
+INFO: [Synth 8-6157] synthesizing module 'conv2_calc_1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v:18]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_11.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v:53]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_12.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v:54]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_13.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'conv2_calc_1' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v:18]
+INFO: [Synth 8-6157] synthesizing module 'conv2_calc_2' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v:18]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_21.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v:53]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_22.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v:54]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_23.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'conv2_calc_2' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v:18]
+INFO: [Synth 8-6157] synthesizing module 'conv2_calc_3' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v:18]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_31.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v:53]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_32.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v:54]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/conv2_weight_33.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'conv2_calc_3' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'conv2_layer' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_layer.v:17]
+INFO: [Synth 8-6157] synthesizing module 'maxpool_relu__parameterized0' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/maxpool_relu.v:19]
+	Parameter CONV_BIT bound to: 12 - type: integer 
+	Parameter HALF_WIDTH bound to: 4 - type: integer 
+	Parameter HALF_HEIGHT bound to: 4 - type: integer 
+	Parameter HALF_WIDTH_BIT bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'maxpool_relu__parameterized0' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/maxpool_relu.v:19]
+INFO: [Synth 8-6157] synthesizing module 'fully_connected' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v:17]
+	Parameter INPUT_NUM bound to: 48 - type: integer 
+	Parameter OUTPUT_NUM bound to: 10 - type: integer 
+	Parameter DATA_BITS bound to: 8 - type: integer 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/fc_weight.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v:40]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Design/training_202503/proj/0225/CNN-Implementation-in-Verilog-master/pyTorch/mnist_cnn/fc_bias.txt'; please make sure the file is added to project and has read permission, ignoring [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'fully_connected' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v:17]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/comparator.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/comparator.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'cnn_top' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/new/cnn_top.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'cnn_data_in' does not match port width (8) of module 'cnn_top' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'cmsdk_ahb_eg_slave' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:28]
+WARNING: [Synth 8-689] width (32) of port connection 'HADDRS' does not match port width (12) of module 'cmsdk_ahb_eg_slave' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:715]
+INFO: [Synth 8-6155] done synthesizing module 'CortexM0_SoC' (0#1) [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:2]
+WARNING: [Synth 8-3848] Net SCANOUTHCLK in module/entity AHB_BusMatrix_3x6_L1 does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1.v:461]
+WARNING: [Synth 8-6014] Unused sequential element sample_wdata_reg_reg was removed.  [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_apb.v:159]
+WARNING: [Synth 8-6014] Unused sequential element reg_be_swap_ctrl_reg was removed.  [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:243]
+WARNING: [Synth 8-3848] Net ext3_psel in module/entity cmsdk_apb_subsystem does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:93]
+WARNING: [Synth 8-3848] Net ext6_psel in module/entity cmsdk_apb_subsystem does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:94]
+WARNING: [Synth 8-3848] Net ext7_psel in module/entity cmsdk_apb_subsystem does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:95]
+WARNING: [Synth 8-3848] Net ext9_psel in module/entity cmsdk_apb_subsystem does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v:96]
+WARNING: [Synth 8-6014] Unused sequential element reg_altfunc_padded_reg was removed.  [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:381]
+WARNING: [Synth 8-3936] Found unconnected internal register 'IOWDATALE_reg' and it is trimmed from '32' to '16' bits. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v:219]
+WARNING: [Synth 8-4767] Trying to implement RAM 'buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has too many ports (16). Maximum supported = 16. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "buffer_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net p_1_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net bias[0] in module/entity conv1_calc does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:35]
+WARNING: [Synth 8-3848] Net p_1_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net bias[1] in module/entity conv1_calc does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:35]
+WARNING: [Synth 8-3848] Net p_1_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv1_calc does not have driver.
+WARNING: [Synth 8-3848] Net bias[2] in module/entity conv1_calc does not have driver. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v:35]
+WARNING: [Synth 8-4767] Trying to implement RAM 'buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has too many ports (16). Maximum supported = 16. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "buffer_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net p_1_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+WARNING: [Synth 8-3848] Net p_0_in in module/entity conv2_calc_1 does not have driver.
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element out_idx_reg was removed.  [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v:52]
+WARNING: [Synth 8-7129] Port clk in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port valid_in in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_0[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_1[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_2[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_3[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_4[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_5[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_6[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[10] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[9] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[8] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[7] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[6] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[5] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[4] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[3] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[2] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[1] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_7[0] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_8[11] in module conv2_calc_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out1_8[10] in module conv2_calc_3 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 1722.691 ; gain = 971.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 1722.691 ; gain = 971.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 1722.691 ; gain = 971.059
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 1722.691 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc]
+WARNING: [Vivado 12-507] No nets matched 'SWCLK_IBUF'. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Netlist 29-177] Cannot set property 'BITSTREAM.CONFIG.CONFIGRATE' because the property does not exist. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc:21]
+Resolution: Create this property using create_property command before setting it.
+CRITICAL WARNING: [Netlist 29-177] Cannot set property 'BITSTREAM.CONFIG.SPI_BUSWIDTH' because the property does not exist. [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc:22]
+Resolution: Create this property using create_property command before setting it.
+Finished Parsing XDC File [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/constrs_1/imports/New_Source/A7-75t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CortexM0_SoC_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CortexM0_SoC_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1823.898 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:34 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:34 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:34 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_c_reg' in module 'AHB_DMAC_Config'
+INFO: [Synth 8-802] inferred FSM for state register 'state_c_reg' in module 'AHB_DMAC'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'cmsdk_ahb_to_apb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+          wait_for_trans |                               01 |                               01
+                   trans |                               10 |                               10
+           wait_for_stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_c_reg' using encoding 'sequential' in module 'AHB_DMAC_Config'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               01 |                               00
+          wait_for_ready |                               11 |                               01
+                    read |                               10 |                               10
+                   write |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_c_reg' using encoding 'sequential' in module 'AHB_DMAC'
+WARNING: [Synth 8-6841] Block RAM (BRAM_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                          0001000 |                              000
+             ST_APB_WAIT |                          0000100 |                              001
+             ST_APB_TRNF |                          0000010 |                              010
+            ST_APB_TRNF2 |                          1000000 |                              011
+             ST_APB_ERR1 |                          0010000 |                              101
+             ST_APB_ERR2 |                          0000001 |                              110
+            ST_APB_ENDOK |                          0100000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'one-hot' in module 'cmsdk_ahb_to_apb'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:47 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+RAM Pipeline Warning: Read Address Register Found For RAM BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   34 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 6     
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	  75 Input   20 Bit       Adders := 3     
+	  25 Input   20 Bit       Adders := 3     
+	  49 Input   19 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 9     
+	   2 Input   12 Bit       Adders := 10    
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 16    
+	   2 Input    5 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 18    
+	   2 Input    3 Bit       Adders := 5     
+	   2 Input    2 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 78    
++---Registers : 
+	               32 Bit    Registers := 33    
+	               20 Bit    Registers := 2     
+	               16 Bit    Registers := 11    
+	               14 Bit    Registers := 5     
+	               12 Bit    Registers := 287   
+	                8 Bit    Registers := 188   
+	                7 Bit    Registers := 4     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 35    
+	                3 Bit    Registers := 14    
+	                2 Bit    Registers := 35    
+	                1 Bit    Registers := 1478  
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 2     
+	              144 Bit	(12 X 12 bit)          RAMs := 3     
+	               48 Bit	(4 X 12 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 75    
+	   4 Input   32 Bit        Muxes := 26    
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 6     
+	   2 Input   14 Bit        Muxes := 2     
+	   4 Input   12 Bit        Muxes := 75    
+	   2 Input   12 Bit        Muxes := 102   
+	   4 Input    8 Bit        Muxes := 27    
+	   2 Input    8 Bit        Muxes := 59    
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 10    
+	   2 Input    5 Bit        Muxes := 4     
+	   3 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 41    
+	   6 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 18    
+	   5 Input    4 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 20    
+	   4 Input    3 Bit        Muxes := 13    
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 44    
+	   3 Input    2 Bit        Muxes := 12    
+	   4 Input    2 Bit        Muxes := 20    
+	   2 Input    1 Bit        Muxes := 812   
+	   3 Input    1 Bit        Muxes := 14    
+	   6 Input    1 Bit        Muxes := 4     
+	   7 Input    1 Bit        Muxes := 22    
+	   5 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 38    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP Affpw60, operation Mode is: A*B.
+DSP Report: operator Affpw60 is absorbed into DSP Affpw60.
+DSP Report: operator Affpw60 is absorbed into DSP Affpw60.
+DSP Report: Generating DSP Affpw60, operation Mode is: A*B.
+DSP Report: operator Affpw60 is absorbed into DSP Affpw60.
+DSP Report: operator Affpw60 is absorbed into DSP Affpw60.
+DSP Report: Generating DSP Affpw60, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Affpw60 is absorbed into DSP Affpw60.
+DSP Report: operator Affpw60 is absorbed into DSP Affpw60.
+RAM Pipeline Warning: Read Address Register Found For RAM FLASH/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM FLASH/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM FLASH/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6841] Block RAM (FLASH/u_fpga_sram/BRAM_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+RAM Pipeline Warning: Read Address Register Found For RAM SRAM/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM SRAM/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM SRAM/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6841] Block RAM (SRAM/u_fpga_sram/BRAM_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+RAM Pipeline Warning: Read Address Register Found For RAM FLASH/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM SRAM/u_fpga_sram/BRAM_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg_reg[4]) is unused and will be removed from module cmsdk_ahb_to_apb.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:01:46 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+ Sort Area is CortexM0_SoC__GC0 Affpw60_0 : 0 0 : 2701 4456 : Used 1 time 0
+ Sort Area is CortexM0_SoC__GC0 Affpw60_0 : 0 1 : 1755 4456 : Used 1 time 0
+ Sort Area is CortexM0_SoC__GC0 Affpw60_3 : 0 0 : 1755 1755 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|CortexM0_SoC | FLASH/u_fpga_sram/BRAM_reg | 16 K x 32(WRITE_FIRST) | W | R |                        |   |   | Port A           | 0      | 16     | 
+|CortexM0_SoC | SRAM/u_fpga_sram/BRAM_reg  | 16 K x 32(WRITE_FIRST) | W | R |                        |   |   | Port A           | 0      | 16     | 
++-------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cortexm0ds_logic | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cortexm0ds_logic | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cortexm0ds_logic | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:01:57 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:01:57 . Memory (MB): peak = 1823.898 ; gain = 1072.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name  | RTL Object                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|CortexM0_SoC | FLASH/u_fpga_sram/BRAM_reg | 16 K x 32(WRITE_FIRST) | W | R |                        |   |   | Port A           | 0      | 16     | 
+|CortexM0_SoC | SRAM/u_fpga_sram/BRAM_reg  | 16 K x 32(WRITE_FIRST) | W | R |                        |   |   | Port A           | 0      | 16     | 
++-------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance FLASH/u_fpga_sram/BRAM_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance SRAM/u_fpga_sram/BRAM_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:02:01 . Memory (MB): peak = 2042.008 ; gain = 1290.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:02:13 . Memory (MB): peak = 2059.730 ; gain = 1308.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:02:14 . Memory (MB): peak = 2059.730 ; gain = 1308.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:02:14 . Memory (MB): peak = 2059.730 ; gain = 1308.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:02:14 . Memory (MB): peak = 2059.730 ; gain = 1308.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:02:14 . Memory (MB): peak = 2059.809 ; gain = 1308.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:02:14 . Memory (MB): peak = 2059.809 ; gain = 1308.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cortexm0ds_logic | A*B          | 15     | 18     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cortexm0ds_logic | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cortexm0ds_logic | PCIN>>17+A*B | 30     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |   144|
+|3     |DSP48E1  |     3|
+|4     |LUT1     |   248|
+|5     |LUT2     |   461|
+|6     |LUT3     |   594|
+|7     |LUT4     |   860|
+|8     |LUT5     |  1317|
+|9     |LUT6     |  3049|
+|10    |MUXF7    |     6|
+|11    |MUXF8    |     1|
+|12    |RAMB36E1 |    32|
+|13    |FDCE     |  1509|
+|14    |FDPE     |   222|
+|15    |FDRE     |  1078|
+|16    |FDSE     |    64|
+|17    |IBUF     |     4|
+|18    |IOBUF    |     1|
+|19    |OBUF     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:02:14 . Memory (MB): peak = 2059.809 ; gain = 1308.176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:02:11 . Memory (MB): peak = 2059.809 ; gain = 1206.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:02:18 . Memory (MB): peak = 2059.809 ; gain = 1308.176
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2069.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2074.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+
+Synth Design complete | Checksum: 69dde5f6
+INFO: [Common 17-83] Releasing license: Synthesis
+170 Infos, 288 Warnings, 20 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:02:28 . Memory (MB): peak = 2074.965 ; gain = 1556.469
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2074.965 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.runs/synth_1/CortexM0_SoC.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file CortexM0_SoC_utilization_synth.rpt -pb CortexM0_SoC_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  6 22:17:42 2025...

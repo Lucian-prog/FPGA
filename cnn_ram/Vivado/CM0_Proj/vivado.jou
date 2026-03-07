@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Oct  7 00:14:49 2025
+# Process ID         : 27312
+# Current directory  : E:/APPS/cnn_ram/Vivado/CM0_Proj
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent28460 E:\APPS\cnn_ram\Vivado\CM0_Proj\CM0_Proj.xpr
+# Log file           : E:/APPS/cnn_ram/Vivado/CM0_Proj/vivado.log
+# Journal file       : E:/APPS/cnn_ram/Vivado/CM0_Proj\vivado.jou
+# Running On         : Legion
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16890 MB
+# Swap memory        : 22548 MB
+# Total Virtual      : 39439 MB
+# Available Virtual  : 13086 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.xpr
+update_compile_order -fileset sources_1

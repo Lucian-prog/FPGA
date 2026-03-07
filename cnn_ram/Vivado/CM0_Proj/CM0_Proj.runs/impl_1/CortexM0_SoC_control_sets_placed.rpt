@@ -1,0 +1,233 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Mon Oct  6 22:47:36 2025
+| Host         : Legion running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CortexM0_SoC_control_sets_placed.rpt
+| Design       : CortexM0_SoC
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   155 |
+|    Minimum number of control sets                        |   155 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   327 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   155 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    37 |
+| >= 6 to < 8        |     9 |
+| >= 8 to < 10       |    43 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    61 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             185 |          102 |
+| No           | No                    | Yes                    |             531 |          299 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             797 |          404 |
+| Yes          | No                    | Yes                    |            1200 |          460 |
+| Yes          | Yes                   | No                     |             160 |           61 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal   |                                            Enable Signal                                           |                                    Set/Reset Signal                                   | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/p_0_in3_in                                               | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              1 |         1.00 |
+|  SWCLK_IBUF_BUFG |                                                                                                    | u_logic/RSTn                                                                          |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/tx_state_update                                          | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Cmlax6_i_1_n_0                                                                             | u_logic/Whmax6_i_1_n_0                                                                |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/rx_tick_cnt[3]_i_1__0_n_0                                | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  SWCLK_IBUF_BUFG | u_logic/Kwlpw6_i_1_n_0                                                                             | u_logic/Nyhpw6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  SWCLK_IBUF_BUFG | u_logic/Y14iu6                                                                                     |                                                                                       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Stmiu6                                                                                     | u_logic/O4sax6_i_1_n_0                                                                |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/reg_baud_cntr_f0                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/reg_baud_cntr_f[3]_i_1__0_n_0                            | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/byte_strobe_reg0                                                  | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Qsmiu6                                                                                     | u_logic/Cdwpw6_i_1_n_0                                                                |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/rx_state_update                                          | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Xsmiu6                                                                                     | u_logic/V5vax6_i_1_n_0                                                                |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Rskax6_i_1_n_0                                                                             |                                                                                       |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/update_rx_tick_cnt                                       | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Ydkiu6                                                                                     | u_logic/Cfwpw6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Csmiu6                                                                                     | u_logic/Eotax6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Ztmiu6                                                                                     | u_logic/De6bx6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/S5nax6_i_1_n_0                                                                             | u_logic/Nznax6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Dzvpw6_i_1_n_0                                                                             |                                                                                       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Zgzpw6_i_1_n_0                                                                             | u_logic/Tg0qw6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/A5qax6_i_1_n_0                                                                             | u_logic/U0rax6_i_1_n_0                                                                |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Etmiu6                                                                                     | u_logic/Cbwpw6_i_1_n_0                                                                |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | u_logic/Iixpw6_i_1_n_0                                                                             |                                                                                       |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | u_logic/Gumiu6                                                                                     | u_logic/C7wpw6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Gz6ax6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_17[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_21[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | u_logic/Jsmiu6                                                                                     | u_logic/Lpwax6_i_1_n_0                                                                |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/HREADY_P4                                                               | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG   | u_logic/Kloax6_i_1_n_0                                                                             | u_logic/Ehpax6_i_1_n_0                                                                |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/tx_state[3]_i_1__0_n_0                                   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Ltmiu6                                                                                     | u_logic/C9wpw6_i_1_n_0                                                                |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/rx_state[3]_i_1__0_n_0                                   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Numiu6                                                                                     | u_logic/C5wpw6_i_1_n_0                                                                |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Tikbx6_i_1_n_0                                                                             |                                                                                       |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG   | u_logic/X5bax6_i_1_n_0                                                                             |                                                                                       |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_AHB_Input_L1_1/E[0]                                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/reg_baud_tick                                            | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/p_0_in19_out                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              7 |         7.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/reg_baud_tick_reg_n_0                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_3[0]                                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/E[1]                                                              | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/rx_shift_buf[6]_i_1__0_n_0                               | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              7 |         7.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_14[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_2[0]                                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              7 |         7.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_24[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG   | u_logic/Mfyax6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | AHB_GPIO/u_ahb_to_gpio/E[0]                                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/prescale_cnt[7]_i_1__0_n_0 | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_18[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_15[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_25[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_22[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_1/prescale_cnt0              | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/rxbuf_sample                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/tx_shift_buf0                                            | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/reg_rx_buf[7]_i_1__0_n_0                                 | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | FLASH/u_ahb_to_sram/buf_data_reg0                                                                  |                                                                                       |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG   | FLASH/u_ahb_to_sram/buf_data_reg022_out                                                            |                                                                                       |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG   | FLASH/u_ahb_to_sram/buf_data_reg018_out                                                            |                                                                                       |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/E[2]                                                              | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG   | u_logic/E05bx6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | FLASH/u_ahb_to_sram/buf_data_reg020_out                                                            |                                                                                       |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG   | SRAM/u_ahb_to_sram/buf_data_reg022_out                                                             |                                                                                       |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG   | SRAM/u_ahb_to_sram/buf_data_reg0                                                                   |                                                                                       |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG   | u_logic/H4zax6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/I74bx6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | SRAM/u_ahb_to_sram/buf_data_reg018_out                                                             |                                                                                       |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG   | SRAM/u_ahb_to_sram/buf_data_reg020_out                                                             |                                                                                       |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG   | u_logic/S3mpw6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Sn4bx6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | u_logic/Wu3bx6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Yqzax6_i_1_n_0                                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/E[3]                                                              | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/E[0]                                                              | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/addr_reg_reg[1]_4[0]                                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_3[3]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_1[2]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_2[3]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_1[0]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_2[1]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_3[1]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_1[1]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_3[0]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_1[3]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_2[2]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_3[2]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_CNN/u_ahb_eg_slave_interface/write_en_reg_reg_2[0]                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | AHB_GPIO/u_ahb_to_gpio/IOADDR_reg[10]_0[0]                                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_AHB_Input_L1_0/E[0]                                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                9 |             10 |         1.11 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_ahb_output_l1_5/u_output_arb/i_no_port_reg_1[0]                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_ahb_output_l1_4/u_output_arb/slave_sel_reg[0]                          | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                7 |             15 |         2.14 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_watchdog.u_apb_watchdog/u_apb_watchdog_frc/reg_count[31]_i_1_n_0             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_1.u_apb_uart_1/reg_baud_cntr_i[15]_i_1__0_n_0                           | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/count_reg[31]_i_1__0_n_0   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_uart_0.u_apb_uart_0/reg_baud_cntr_i0                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_1/count_reg[31]_i_1_n_0      | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_watchdog.u_apb_watchdog/u_apb_watchdog_frc/reg_carry0                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                5 |             18 |         3.60 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_ahb_output_l1_1/u_output_arb/i_no_port_reg_4[0]                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_ahb_output_l1_0/u_output_arb/i_addr_in_port_reg[1]_0[0]                | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                5 |             18 |         3.60 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_1/carry_reg0                 | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                8 |             18 |         2.25 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/count_reg[15]_i_1__0_n_0   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                8 |             18 |         2.25 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_23[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                9 |             20 |         2.22 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_13[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                7 |             20 |         2.86 |
+|  clk_IBUF_BUFG   | u_logic/Sm1iu6                                                                                     |                                                                                       |               10 |             22 |         2.20 |
+|  clk_IBUF_BUFG   | u_logic/Wnxax6_i_1_n_0                                                                             |                                                                                       |                9 |             24 |         2.67 |
+|  SWCLK_IBUF_BUFG |                                                                                                    | u_logic/Nyhpw6_i_1_n_0                                                                |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG   | u_logic/Ydkiu6                                                                                     |                                                                                       |               18 |             26 |         1.44 |
+|  clk_IBUF_BUFG   | u_logic/Zgzpw6_i_1_n_0                                                                             |                                                                                       |               16 |             26 |         1.62 |
+|  clk_IBUF_BUFG   | u_logic/Csmiu6                                                                                     |                                                                                       |               22 |             28 |         1.27 |
+|  clk_IBUF_BUFG   | u_logic/Ztmiu6                                                                                     |                                                                                       |               13 |             28 |         2.15 |
+|  clk_IBUF_BUFG   | u_logic/Ltmiu6                                                                                     |                                                                                       |               16 |             28 |         1.75 |
+|  clk_IBUF_BUFG   | u_logic/Cmlax6_i_1_n_0                                                                             |                                                                                       |               20 |             28 |         1.40 |
+|  clk_IBUF_BUFG   | u_logic/Qsmiu6                                                                                     |                                                                                       |               19 |             28 |         1.47 |
+|  clk_IBUF_BUFG   | u_logic/Etmiu6                                                                                     |                                                                                       |               13 |             28 |         2.15 |
+|  clk_IBUF_BUFG   | u_logic/Numiu6                                                                                     |                                                                                       |               14 |             28 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Gumiu6                                                                                     |                                                                                       |               13 |             28 |         2.15 |
+|  clk_IBUF_BUFG   | u_logic/Jsmiu6                                                                                     |                                                                                       |               15 |             28 |         1.87 |
+|  clk_IBUF_BUFG   | u_logic/Stmiu6                                                                                     |                                                                                       |               14 |             28 |         2.00 |
+|  clk_IBUF_BUFG   | u_logic/Xsmiu6                                                                                     |                                                                                       |               15 |             28 |         1.87 |
+|  clk_IBUF_BUFG   | u_logic/S5nax6_i_1_n_0                                                                             |                                                                                       |               18 |             28 |         1.56 |
+|  clk_IBUF_BUFG   | u_logic/A5qax6_i_1_n_0                                                                             |                                                                                       |               12 |             28 |         2.33 |
+|  clk_IBUF_BUFG   | u_logic/Kloax6_i_1_n_0                                                                             |                                                                                       |               11 |             28 |         2.55 |
+|  clk_IBUF_BUFG   | u_logic/Ahdax6_i_1_n_0                                                                             |                                                                                       |                8 |             29 |         3.62 |
+|  clk_IBUF_BUFG   | u_logic/Opbax6_i_1_n_0                                                                             |                                                                                       |                9 |             29 |         3.22 |
+|  clk_IBUF_BUFG   | u_logic/Dncax6_i_1_n_0                                                                             |                                                                                       |                7 |             29 |         4.14 |
+|  clk_IBUF_BUFG   | u_logic/Tceax6_i_1_n_0                                                                             |                                                                                       |                9 |             29 |         3.22 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_19[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_timer_1.u_apb_timer_1/reg_curr_val[31]_i_1__0_n_0                            | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG   | APB_Subsystem/gen_apb_timer_0.u_apb_timer_0/reg_curr_val                                           | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_9[0]                                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_11[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG   | AHB_DMAC_Config_0/DMAlen[31]_i_1_n_0                                                               | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_8[0]                                                         | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG   | AHB_DMAC_Config_0/DMAsrc[31]_i_1_n_0                                                               | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG   | AHB_DMAC/write_addr[31]_i_1_n_0                                                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG   | u_logic/Itcbx6_i_1_n_0                                                                             |                                                                                       |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG   | AHB_DMAC/read_addr[31]_i_1_n_0                                                                     | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG   | AHB_DMAC_Config_0/DMAdst[31]_i_1_n_0                                                               | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_10[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/wr_reg_reg_16[0]                                                        | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG   | u_logic/Fvcbx6_i_1_n_0                                                                             |                                                                                       |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/rwdata_reg0                                                             | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG   | APB_Subsystem/u_ahb_to_apb/addr_reg_reg[0]_5[0]                                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG   | u_logic/DMAstart                                                                                   | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |                9 |             34 |         3.78 |
+|  clk_IBUF_BUFG   | AHB_BusMatrix_3x6_L1_inst/u_AHB_Input_L1_1/reg_addr[31]_i_1__0_n_0                                 | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               14 |             34 |         2.43 |
+|  clk_IBUF_BUFG   | u_logic/E[0]                                                                                       | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               14 |             34 |         2.43 |
+|  SWCLK_IBUF_BUFG |                                                                                                    |                                                                                       |               14 |             35 |         2.50 |
+|  SWCLK_IBUF_BUFG | u_logic/Em1iu6                                                                                     |                                                                                       |               10 |             37 |         3.70 |
+|  clk_IBUF_BUFG   |                                                                                                    | u_logic/RSTn                                                                          |               31 |             48 |         1.55 |
+|  clk_IBUF_BUFG   | AHB_DMAC/cnt0                                                                                      | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |               33 |             64 |         1.94 |
+|  clk_IBUF_BUFG   |                                                                                                    |                                                                                       |               88 |            150 |         1.70 |
+|  clk_IBUF_BUFG   |                                                                                                    | APB_Subsystem/gen_apb_dualtimers_2.u_apb_dualtimers_2/u_apb_timer_frc_2/cpuresetn_reg |              254 |            456 |         1.80 |
++------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

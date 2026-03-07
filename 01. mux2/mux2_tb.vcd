@@ -1,0 +1,71 @@
+$date
+	Wed Feb 18 21:26:32 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module mux2_tb $end
+$var wire 1 ! mux2_out $end
+$var reg 1 " S0 $end
+$var reg 1 # S1 $end
+$var reg 1 $ S2 $end
+$var integer 32 % err [31:0] $end
+$scope module mux2_inst0 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ sel $end
+$var wire 1 ! out $end
+$upscope $end
+$scope task check $end
+$var reg 1 & exp $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x&
+b0 %
+0$
+0#
+0"
+0!
+$end
+#10
+0&
+#11
+1!
+1"
+#21
+1&
+#22
+0!
+0"
+1#
+#32
+0&
+#33
+1!
+1"
+#43
+1&
+#44
+0!
+0"
+0#
+1$
+#54
+0&
+#55
+1"
+#66
+1!
+0"
+1#
+#76
+1&
+#77
+1"
+#88

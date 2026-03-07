@@ -1,0 +1,81 @@
+Dependencies for Project 'WirelessMCU', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (..\SYSTEM\system_CMSDK_CM0.c)(0x63898D04)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\system_cmsdk_cm0.o --omf_browse ..\obj\system_cmsdk_cm0.crf --depend ..\obj\system_cmsdk_cm0.d)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+F (..\SYSTEM\system.c)(0x638993A5)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\system.o --omf_browse ..\obj\system.crf --depend ..\obj\system.d)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+I (A:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+F (..\HARDWARE\SYG_M0_gpio.c)(0x63898FA9)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\syg_m0_gpio.o --omf_browse ..\obj\syg_m0_gpio.crf --depend ..\obj\syg_m0_gpio.d)
+I (..\HARDWARE\SYG_M0_gpio.h)(0x63898FBE)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+F (..\HARDWARE\SYG_M0_uart.c)(0x63898FA9)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\syg_m0_uart.o --omf_browse ..\obj\syg_m0_uart.crf --depend ..\obj\syg_m0_uart.d)
+I (..\HARDWARE\SYG_M0_uart.h)(0x63898FC9)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+F (..\HARDWARE\SYG_M0_printk.c)(0x63899499)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\syg_m0_printk.o --omf_browse ..\obj\syg_m0_printk.crf --depend ..\obj\syg_m0_printk.d)
+I (..\HARDWARE\SYG_M0_printk.h)(0x63899474)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+I (A:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AD218)
+I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (A:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (A:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
+I (..\HARDWARE\SYG_M0_uart.h)(0x63898FC9)
+F (..\HARDWARE\SYG_M0_dma.c)(0x638D9892)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\syg_m0_dma.o --omf_browse ..\obj\syg_m0_dma.crf --depend ..\obj\syg_m0_dma.d)
+I (..\HARDWARE\SYG_M0_dma.h)(0x638D5FEB)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+I (A:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+F (.\main.c)(0x6391E5CF)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+I (..\HARDWARE\SYG_M0_uart.h)(0x63898FC9)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+I (..\HARDWARE\SYG_M0_gpio.h)(0x63898FBE)
+I (..\HARDWARE\SYG_M0_printk.h)(0x63899474)
+I (A:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AD218)
+I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (A:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (A:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
+I (..\HARDWARE\SYG_M0_dma.h)(0x638D5FEB)
+I (..\SYSTEM\system.h)(0x63899237)
+I (A:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+F (.\SYG_M0_it.c)(0x638992FC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DCMSDK_CM0-o ..\obj\syg_m0_it.o --omf_browse ..\obj\syg_m0_it.crf --depend ..\obj\syg_m0_it.d)
+I (..\SYSTEM\system.h)(0x63899237)
+I (..\SYSTEM\CMSDK_CM0.h)(0x638D978A)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x56FDD20A)
+F (..\CORE\startup_CMSDK_CM0.s)(0x638993DA)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-IA:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include-IA:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529" --pd "CMSDK_CM0 SETA 1"--list .\listings\startup_cmsdk_cm0.lst --xref -o ..\obj\startup_cmsdk_cm0.o --depend ..\obj\startup_cmsdk_cm0.d)

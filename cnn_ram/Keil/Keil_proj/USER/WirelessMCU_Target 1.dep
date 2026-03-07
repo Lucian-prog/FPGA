@@ -1,0 +1,81 @@
+Dependencies for Project 'WirelessMCU', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (..\SYSTEM\system_CMSDK_CM0.c)(0x63898D04)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\system_cmsdk_cm0.o --omf_browse .\system_cmsdk_cm0.crf --depend .\system_cmsdk_cm0.d)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+F (..\SYSTEM\system.c)(0x63FCC4DC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\system.o --omf_browse .\system.crf --depend .\system.d)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+I (D:\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (..\HARDWARE\SYG_M0_gpio.c)(0x63898FA9)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\syg_m0_gpio.o --omf_browse .\syg_m0_gpio.crf --depend .\syg_m0_gpio.d)
+I (..\HARDWARE\SYG_M0_gpio.h)(0x63898FBE)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+F (..\HARDWARE\SYG_M0_uart.c)(0x63898FA9)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\syg_m0_uart.o --omf_browse .\syg_m0_uart.crf --depend .\syg_m0_uart.d)
+I (..\HARDWARE\SYG_M0_uart.h)(0x63898FC9)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+F (..\HARDWARE\SYG_M0_printk.c)(0x63899499)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\syg_m0_printk.o --omf_browse .\syg_m0_printk.crf --depend .\syg_m0_printk.d)
+I (..\HARDWARE\SYG_M0_printk.h)(0x63899474)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+I (D:\Keil5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (D:\Keil5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (..\HARDWARE\SYG_M0_uart.h)(0x63898FC9)
+F (..\HARDWARE\SYG_M0_dma.c)(0x638D9892)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\syg_m0_dma.o --omf_browse .\syg_m0_dma.crf --depend .\syg_m0_dma.d)
+I (..\HARDWARE\SYG_M0_dma.h)(0x638D5FEB)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+I (D:\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\main.c)(0x67E15554)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (..\HARDWARE\SYG_M0_uart.h)(0x63898FC9)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+I (..\HARDWARE\SYG_M0_gpio.h)(0x63898FBE)
+I (..\HARDWARE\SYG_M0_printk.h)(0x63899474)
+I (D:\Keil5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (D:\Keil5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (D:\Keil5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (..\HARDWARE\SYG_M0_dma.h)(0x638D5FEB)
+I (..\SYSTEM\system.h)(0x63899237)
+I (D:\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\SYG_M0_it.c)(0x638992FC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\CortexM0_FWLib -I ..\OBJ -I ..\SYSTEM -I ..\USER -I ..\HARDWARE-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include-D__UVISION_VERSION="536" -DCMSDK_CM0-o .\syg_m0_it.o --omf_browse .\syg_m0_it.crf --depend .\syg_m0_it.d)
+I (..\SYSTEM\system.h)(0x63899237)
+I (..\SYSTEM\CMSDK_CM0.h)(0x668FDB25)
+I (..\CORE\core_cm0.h)(0x52D7F961)
+I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\CORE\core_cmInstr.h)(0x52D7F961)
+I (..\CORE\core_cmFunc.h)(0x52D7F961)
+I (D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h)(0x61DFD4E6)
+F (..\CORE\startup_CMSDK_CM0.s)(0x638993DA)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-ID:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include--pd "__UVISION_VERSION SETA 536" --pd "CMSDK_CM0 SETA 1"--list .\listings\startup_cmsdk_cm0.lst --xref -o .\startup_cmsdk_cm0.o --depend .\startup_cmsdk_cm0.d)

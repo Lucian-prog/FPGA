@@ -1,0 +1,45 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "watcher": {
+    "ignore": [
+      ".git/**",
+      "*.bit",
+      "*.bin",
+      "*.mcs",
+      "*.log",
+      "*.jou",
+      "*.str",
+      "vivado*/**",
+      ".Xil/**",
+      "impl_*/**",
+      "synth_*/**"
+    ]
+  },
+
+  "instructions": [
+    "AGENTS.md"
+  ],
+
+  "command": {
+    "new-module": {
+      "description": "创建新的 Verilog 模块（含模板和 testbench）",
+      "template": "在 $ARGUMENTS 目录下创建一个新的 Verilog 模块。\n要求：\n1. 创建模块文件 <name>.v，包含规范的模块头注释、参数化端口定义\n2. 创建测试文件 <name>_tb.v，包含时钟生成、复位序列和基础测试激励\n3. 遵循项目已有的代码风格（参考 06. UART 或 16. async_fifo 目录）\n4. 代码注释使用中文"
+    },
+    "review-timing": {
+      "description": "分析 Verilog 模块的时序设计是否合理",
+      "template": "请分析 $ARGUMENTS 文件中的时序设计：\n1. 检查是否存在跨时钟域（CDC）问题\n2. 检查复位是否规范（同步/异步复位）\n3. 检查是否有组合逻辑环路\n4. 检查建立时间/保持时间相关的设计问题\n5. 给出改进建议"
+    },
+    "explain-module": {
+      "description": "详细解读 Verilog 模块原理",
+      "template": "请详细讲解 $ARGUMENTS 文件中的模块：\n1. 整体功能和应用场景\n2. 端口信号含义\n3. 内部逻辑实现原理（结合代码）\n4. 时序行为\n5. 从数字IC设计角度的评价和改进点"
+    },
+    "ic-interview": {
+      "description": "模拟数字IC面试题，考察当前模块",
+      "template": "基于 $ARGUMENTS 文件，出5道数字IC前端设计面试题并给出答案。\n题目要覆盖：\n1. 原理性问题（为什么这样设计）\n2. 时序问题\n3. 边界条件\n4. 改进/扩展问题\n5. 相关知识点延伸"
+    }
+  },
+
+  "permission": {
+    "bash": "ask"
+  }
+}

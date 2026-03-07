@@ -1,0 +1,102 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Arbiter_L1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_Arbiter_L1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_BusMatrix_3x6_L1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1_default_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_BusMatrix_3x6_L1_default_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_DMAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC_Config.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_DMAC_Config
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_Decoder_L1S0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_Decoder_L1S1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_Decoder_L1S2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_Input_L1
+WARNING: [VRFC 10-9157] macro 'TRN_IDLE' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:117]
+WARNING: [VRFC 10-9157] macro 'TRN_BUSY' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:118]
+WARNING: [VRFC 10-9157] macro 'TRN_NONSEQ' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:119]
+WARNING: [VRFC 10-9157] macro 'TRN_SEQ' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:120]
+WARNING: [VRFC 10-9157] macro 'BUR_SINGLE' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:123]
+WARNING: [VRFC 10-9157] macro 'BUR_INCR' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:124]
+WARNING: [VRFC 10-9157] macro 'BUR_WRAP4' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:125]
+WARNING: [VRFC 10-9157] macro 'BUR_INCR4' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:126]
+WARNING: [VRFC 10-9157] macro 'BUR_WRAP8' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:127]
+WARNING: [VRFC 10-9157] macro 'BUR_INCR8' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:128]
+WARNING: [VRFC 10-9157] macro 'BUR_WRAP16' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:129]
+WARNING: [VRFC 10-9157] macro 'BUR_INCR16' is redefined [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v:130]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Output_L1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB_Output_L1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CortexM0_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_eg_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_eg_slave_interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_eg_slave_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_gpio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_gpio
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_apb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_to_apb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_iop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_to_iop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_ahb_to_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_dualtimers
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers_frc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_dualtimers_frc
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_slave_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_slave_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_subsystem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_watchdog
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog_frc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_apb_watchdog_frc
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_fpga_sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_fpga_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_iop_gpio
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_irq_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmsdk_irq_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/new/cnn_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_buf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_buf
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_calc
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_layer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_layer
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_buf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2_buf
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2_calc_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2_calc_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2_calc_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_layer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2_layer
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/cortexm0ds_logic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cortexm0ds_logic
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fully_connected
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/maxpool_relu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maxpool_relu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

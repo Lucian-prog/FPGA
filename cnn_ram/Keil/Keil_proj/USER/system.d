@@ -1,0 +1,9 @@
+.\system.o: ..\SYSTEM\system.c
+.\system.o: ..\SYSTEM\CMSDK_CM0.h
+.\system.o: ..\CORE\core_cm0.h
+.\system.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\system.o: ..\CORE\core_cmInstr.h
+.\system.o: ..\CORE\core_cmFunc.h
+.\system.o: D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h
+.\system.o: ..\CORE\core_cm0.h
+.\system.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Feb 25 21:01:36 2025
+# Process ID: 16228
+# Current directory: D:/Design/Digital_IC/Cortex-M0_Design/CM0_Xilinx/Cortex_M0/Vivado/CM0_Proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27204 D:\Design\Digital_IC\Cortex-M0_Design\CM0_Xilinx\Cortex_M0\Vivado\CM0_Proj\CM0_Proj.xpr
+# Log file: D:/Design/Digital_IC/Cortex-M0_Design/CM0_Xilinx/Cortex_M0/Vivado/CM0_Proj/vivado.log
+# Journal file: D:/Design/Digital_IC/Cortex-M0_Design/CM0_Xilinx/Cortex_M0/Vivado/CM0_Proj\vivado.jou
+# Running On: syg_design, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 25009 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Design/Digital_IC/Cortex-M0_Design/CM0_Xilinx/Cortex_M0/Vivado/CM0_Proj/CM0_Proj.xpr
+update_compile_order -fileset sources_1

@@ -1,0 +1,83 @@
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'HRESPS0' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:299]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'HMASTERM0' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:348]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'HMASTERM1' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:368]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'HMASTERM2' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:387]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'HMASTERM3' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:406]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'HMASTERM4' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:425]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 4 for port 'HMASTERM5' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:444]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'HRESP' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:483]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'HMASTERC' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:484]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'HRESPD' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:508]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'HADDR' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:531]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'HADDR' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:559]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'HADDR' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:600]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 12 for port 'PADDR' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:615]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ext3_prdata' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:621]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ext6_pready' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:627]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ext6_pslverr' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:628]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ext7_pready' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:632]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ext7_pslverr' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:633]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ext9_pready' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:637]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ext9_pslverr' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:638]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'HADDR' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:681]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'HADDRS' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:715]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'cnn_data_in' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:115]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'cnn_data_in' [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v:123]
+WARNING: [VRFC 10-5021] port 'uart1_rxd' is not connected on this instance [E:/APPS/cnn_ram/Vivado/CM0_Proj/CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v:582]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cortexm0ds_logic
+Compiling module xil_defaultlib.AHB_Input_L1
+Compiling module xil_defaultlib.AHB_BusMatrix_3x6_L1_default_sla...
+Compiling module xil_defaultlib.AHB_Decoder_L1S0
+Compiling module xil_defaultlib.AHB_Decoder_L1S1
+Compiling module xil_defaultlib.AHB_Decoder_L1S2
+Compiling module xil_defaultlib.AHB_Arbiter_L1
+Compiling module xil_defaultlib.AHB_Output_L1
+Compiling module xil_defaultlib.AHB_BusMatrix_3x6_L1
+Compiling module xil_defaultlib.AHB_DMAC_Config
+Compiling module xil_defaultlib.AHB_DMAC
+Compiling module xil_defaultlib.cmsdk_ahb_to_sram
+Compiling module xil_defaultlib.cmsdk_fpga_sram(AW=14)
+Compiling module xil_defaultlib.cmsdk_ahb_ram(MEM_TYPE=2,filenam...
+Compiling module xil_defaultlib.cmsdk_ahb_to_apb
+Compiling module xil_defaultlib.cmsdk_apb_slave_mux(PORT3_ENABLE...
+Compiling module xil_defaultlib.cmsdk_apb_timer
+Compiling module xil_defaultlib.cmsdk_apb_dualtimers_frc
+Compiling module xil_defaultlib.cmsdk_apb_dualtimers
+Compiling module xil_defaultlib.cmsdk_apb_watchdog_frc
+Compiling module xil_defaultlib.cmsdk_apb_watchdog
+Compiling module xil_defaultlib.cmsdk_apb_uart
+Compiling module xil_defaultlib.cmsdk_apb_subsystem_default
+Compiling module xil_defaultlib.cmsdk_ahb_to_iop
+Compiling module xil_defaultlib.cmsdk_iop_gpio(ALTERNATE_FUNC_MA...
+Compiling module xil_defaultlib.cmsdk_ahb_gpio(ALTERNATE_FUNC_MA...
+Compiling module xil_defaultlib.cmsdk_ahb_eg_slave_interface
+Compiling module xil_defaultlib.cmsdk_ahb_eg_slave_reg
+Compiling module xil_defaultlib.conv1_buf
+Compiling module xil_defaultlib.conv1_calc
+Compiling module xil_defaultlib.conv1_layer
+Compiling module xil_defaultlib.maxpool_relu
+Compiling module xil_defaultlib.conv2_buf
+Compiling module xil_defaultlib.conv2_calc_1
+Compiling module xil_defaultlib.conv2_calc_2
+Compiling module xil_defaultlib.conv2_calc_3
+Compiling module xil_defaultlib.conv2_layer
+Compiling module xil_defaultlib.maxpool_relu(HALF_WIDTH=4,HALF_W...
+Compiling module xil_defaultlib.fully_connected
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.cnn_top
+Compiling module xil_defaultlib.cmsdk_ahb_eg_slave
+Compiling module xil_defaultlib.CortexM0_SoC
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav

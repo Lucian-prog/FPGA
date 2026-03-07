@@ -1,0 +1,185 @@
+$date
+	Wed Feb 18 21:27:33 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module gray_converter_tb $end
+$var wire 4 ! gray_out [3:0] $end
+$var wire 4 " bin_out [3:0] $end
+$var reg 4 # bin_in [3:0] $end
+$var reg 4 $ gray_in [3:0] $end
+$scope module gray_converter_inst $end
+$var wire 4 % bin_in [3:0] $end
+$var wire 4 & gray_in [3:0] $end
+$var wire 4 ' gray_out [3:0] $end
+$var wire 4 ( bin_out [3:0] $end
+$scope begin genblk1[0] $end
+$scope begin genblk3 $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[1] $end
+$scope begin genblk3 $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[2] $end
+$scope begin genblk3 $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[3] $end
+$scope begin genblk2 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#20
+b1 "
+b1 (
+b1 !
+b1 '
+b1 $
+b1 &
+b1 #
+b1 %
+#30
+b10 "
+b10 (
+b11 !
+b11 '
+b11 $
+b11 &
+b10 #
+b10 %
+#40
+b11 "
+b11 (
+b10 !
+b10 '
+b10 $
+b10 &
+b11 #
+b11 %
+#50
+b100 "
+b100 (
+b110 !
+b110 '
+b110 $
+b110 &
+b100 #
+b100 %
+#60
+b101 "
+b101 (
+b111 !
+b111 '
+b111 $
+b111 &
+b101 #
+b101 %
+#70
+b110 "
+b110 (
+b101 !
+b101 '
+b101 $
+b101 &
+b110 #
+b110 %
+#80
+b111 "
+b111 (
+b100 !
+b100 '
+b100 $
+b100 &
+b111 #
+b111 %
+#90
+b1000 "
+b1000 (
+b1100 !
+b1100 '
+b1100 $
+b1100 &
+b1000 #
+b1000 %
+#100
+b1001 "
+b1001 (
+b1101 !
+b1101 '
+b1101 $
+b1101 &
+b1001 #
+b1001 %
+#110
+b1010 "
+b1010 (
+b1111 !
+b1111 '
+b1111 $
+b1111 &
+b1010 #
+b1010 %
+#120
+b1011 "
+b1011 (
+b1110 !
+b1110 '
+b1110 $
+b1110 &
+b1011 #
+b1011 %
+#130
+b1100 "
+b1100 (
+b1010 !
+b1010 '
+b1010 $
+b1010 &
+b1100 #
+b1100 %
+#140
+b1101 "
+b1101 (
+b1011 !
+b1011 '
+b1011 $
+b1011 &
+b1101 #
+b1101 %
+#150
+b1110 "
+b1110 (
+b1001 !
+b1001 '
+b1001 $
+b1001 &
+b1110 #
+b1110 %
+#160
+b1111 "
+b1111 (
+b1000 !
+b1000 '
+b1000 $
+b1000 &
+b1111 #
+b1111 %
+#170

@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Zexuan Lu, NJUPT, LIC=VGXG8-3E7F6-GK9BG-V9BL9-0DQAQ-5EK0E
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  D:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+E:\APPS\cnn_ram\Keil\Keil_proj\USER\WirelessMCU.uvprojx
+Project File Date:  04/13/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling startup_CMSDK_CM0.s...
+compiling SYG_M0_printk.c...
+..\HARDWARE\SYG_M0_printk.c(14): warning:  #2532-D: support for trigraphs is disabled
+   ** 		base:????(?????????8???)
+..\HARDWARE\SYG_M0_printk.c: 1 warning, 0 errors
+compiling SYG_M0_uart.c...
+compiling SYG_M0_dma.c...
+..\HARDWARE\SYG_M0_dma.c(11): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\SYG_M0_dma.c: 1 warning, 0 errors
+compiling system_CMSDK_CM0.c...
+compiling SYG_M0_it.c...
+compiling main.c...
+main.c(113): warning:  #177-D: variable "rx_buf"  was declared but never referenced
+  	uint32_t rx_buf[8];
+main.c(114): warning:  #177-D: variable "read_data"  was declared but never referenced
+  	uint32_t read_data;
+main.c(116): warning:  #177-D: variable "err"  was declared but never referenced
+  	uint8_t err=0;
+main.c(117): warning:  #177-D: variable "a"  was declared but never referenced
+  	int a=0,i=0;
+main.c: 4 warnings, 0 errors
+compiling SYG_M0_gpio.c...
+compiling system.c...
+linking...
+Program Size: Code=2292 RO-data=224 RW-data=792 ZI-data=512  
+After Build - User command #1: fromelf -cvf .\WirelessMCU.axf --vhx --32x1 -o WirelessMCU.hex
+After Build - User command #2: fromelf -cvf .\WirelessMCU.axf -o WirelessMCU.txt
+".\WirelessMCU.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.V2M-MPS2_CMx_BSP.1.8.0.pack
+                Keil.V2M-MPS2_CMx_BSP.1.8.0
+                ARM V2M-MPS2 Board Support PACK for Cortex-M System Design Kit Devices
+
+<h2>Collection of Component include folders:</h2>
+  D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

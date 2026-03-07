@@ -1,0 +1,17 @@
+..\obj\main.o: main.c
+..\obj\main.o: ..\HARDWARE\SYG_M0_uart.h
+..\obj\main.o: ..\SYSTEM\CMSDK_CM0.h
+..\obj\main.o: ..\CORE\core_cm0.h
+..\obj\main.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\main.o: ..\CORE\core_cmInstr.h
+..\obj\main.o: ..\CORE\core_cmFunc.h
+..\obj\main.o: A:\Users\SYG\AppData\Local\Arm\Packs\Keil\V2M-MPS2_CMx_BSP\1.7.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h
+..\obj\main.o: ..\HARDWARE\SYG_M0_gpio.h
+..\obj\main.o: ..\HARDWARE\SYG_M0_printk.h
+..\obj\main.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\obj\main.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\main.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\main.o: ..\HARDWARE\SYG_M0_dma.h
+..\obj\main.o: ..\SYSTEM\system.h
+..\obj\main.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

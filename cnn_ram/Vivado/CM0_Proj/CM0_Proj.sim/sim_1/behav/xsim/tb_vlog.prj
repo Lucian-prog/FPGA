@@ -1,0 +1,52 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" --include "../../../../CM0_Proj.srcs/sources_1/imports/new_rtl" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Arbiter_L1.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_BusMatrix_3x6_L1_default_slave.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/AHB_DMAC_Config.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S0.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S1.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Decoder_L1S2.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Input_L1.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/AHB_BusMatrix_3x6_L1/AHB_Output_L1.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/CortexM0_SoC.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_interface.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/verilog/cmsdk_ahb_eg_slave_reg.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_gpio.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_ram.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_apb.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_iop.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_ahb_to_sram.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_dualtimers_frc.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_slave_mux.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_subsystem.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_timer.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_uart.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_apb_watchdog_frc.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_fpga_sram.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_iop_gpio.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cmsdk_irq_sync.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/new/cnn_top.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/comparator.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_buf.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_calc.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv1_layer.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_buf.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_1.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_2.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_calc_3.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/conv2_layer.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/new_rtl/cortexm0ds_logic.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/fully_connected.v" \
+"../../../../CM0_Proj.srcs/sources_1/imports/sources_1/imports/cnn_verilog/maxpool_relu.v" \
+"../../../../CM0_Proj.srcs/sim_1/new/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

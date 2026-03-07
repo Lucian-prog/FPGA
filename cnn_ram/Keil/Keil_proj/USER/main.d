@@ -1,0 +1,17 @@
+.\main.o: main.c
+.\main.o: ..\HARDWARE\SYG_M0_uart.h
+.\main.o: ..\SYSTEM\CMSDK_CM0.h
+.\main.o: ..\CORE\core_cm0.h
+.\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\main.o: ..\CORE\core_cmInstr.h
+.\main.o: ..\CORE\core_cmFunc.h
+.\main.o: D:\Keil5\Packs\Keil\V2M-MPS2_CMx_BSP\1.8.0\Device\CMSDK_CM0\Include\system_CMSDK_CM0.h
+.\main.o: ..\HARDWARE\SYG_M0_gpio.h
+.\main.o: ..\HARDWARE\SYG_M0_printk.h
+.\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\main.o: ..\HARDWARE\SYG_M0_dma.h
+.\main.o: ..\SYSTEM\system.h
+.\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
