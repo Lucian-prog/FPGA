@@ -58,6 +58,10 @@ module cmsdk_ahb_eg_slave #(
   wire  [3:0]            reg_byte_strobe;
   wire  [31:0]           reg_wdata;
   wire  [31:0]           reg_rdata;
+  wire  [7:0]            cnn_data_in;
+  wire                   cnn_data_valid;
+  wire                   cnn_result_valid;
+  wire  [3:0]            cnn_decision;
 
   //-----------------------------------------------------------
   // Module logic start
@@ -94,8 +98,6 @@ module cmsdk_ahb_eg_slave #(
   .rdata        (reg_rdata)
   );
 
-  wire [31:0] cnn_data_in;
-  wire        cnn_data_valid;
   // Simple data register block with four 32-bit registers
   cmsdk_ahb_eg_slave_reg
    #(.ADDRWIDTH (ADDRWIDTH))
@@ -113,7 +115,9 @@ module cmsdk_ahb_eg_slave #(
   .ecorevnum    (ECOREVNUM),
   .rdata        (reg_rdata),
   .cnn_data_in  (cnn_data_in),
-  .cnn_data_valid(cnn_data_valid)
+  .cnn_data_valid(cnn_data_valid),
+  .cnn_result_valid(cnn_result_valid),
+  .cnn_decision (cnn_decision)
 
   );
 
@@ -122,8 +126,8 @@ module cmsdk_ahb_eg_slave #(
   .rst_n        (HRESETn),
   .cnn_data_in  (cnn_data_in),
   .cnn_data_valid(cnn_data_valid),
-  .valid_out_6  (),
-  .decision     ()
+  .valid_out_6  (cnn_result_valid),
+  .decision     (cnn_decision)
   );
 
 
@@ -182,4 +186,3 @@ module cmsdk_ahb_eg_slave #(
 `endif
 
 endmodule
-
