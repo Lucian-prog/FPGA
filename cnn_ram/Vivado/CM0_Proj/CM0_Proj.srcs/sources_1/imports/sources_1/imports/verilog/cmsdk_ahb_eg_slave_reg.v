@@ -43,7 +43,9 @@ module cmsdk_ahb_eg_slave_reg #(
   output reg  [31:0]            rdata,
   
   output reg [7:0]              cnn_data_in,
-  output reg                    cnn_data_valid  
+  output reg                    cnn_data_valid,
+  input  wire                   cnn_result_valid,
+  input  wire [3:0]             cnn_decision
   );
 
 
@@ -120,25 +122,22 @@ localparam  ARM_CMSDK_AHB_EG_SLAVE_CID3 = 32'h000000B1; // 0xFFC : CID 3
     end
   end
 
-   //data1
-  always @(posedge hclk or negedge hresetn)
-    begin
-    if (~hresetn)
-      begin
-        data1 <= {32{1'b0}}; // reset data register to 0x00000000
-      end
-    else if (wr_sel[1])
-      begin
-        if (byte_strobe[0])
-            data1[ 7: 0] <= wdata[ 7: 0];
-        if (byte_strobe[1])
-            data1[15: 8] <= wdata[15: 8];
-        if (byte_strobe[2])
-            data1[23:16] <= wdata[23:16];
-        if (byte_strobe[3])
-            data1[31:24] <= wdata[31:24];
-      end
-    end
+   //data1: CNN status/result register
+   always @(posedge hclk or negedge hresetn)
+     begin
+     if (~hresetn)
+       begin
+         data1 <= {32{1'b0}}; // reset data register to 0x00000000
+       end
+     else if (wr_sel[0])
+       begin
+         data1 <= {32{1'b0}};
+       end
+     else if (cnn_result_valid)
+       begin
+         data1 <= {23'd0, 1'b1, 4'd0, cnn_decision};
+       end
+     end
 
 
   //data2
