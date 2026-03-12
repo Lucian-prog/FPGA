@@ -16,7 +16,6 @@ module key_filter_tb;
     .clk(clk), .rst_n(rst_n), .key(key),
     .key_p_flag(p1_flag), .key_r_flag(r1_flag), .key_state(s1)
   );
-  defparam u1.DEBOUNCE_TIME = DEBOUNCE_SIM;
 
   // para3（标准三段式）
   wire p3_flag, r3_flag, s3;
@@ -24,7 +23,6 @@ module key_filter_tb;
     .clk(clk), .rst_n(rst_n), .key(key),
     .key_p_flag(p3_flag), .key_r_flag(r3_flag), .key_state(s3)
   );
-  defparam u3.DEBOUNCE_TIME = DEBOUNCE_SIM;
 
   always #CLK_HALF clk = ~clk;
 
