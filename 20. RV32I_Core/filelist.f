@@ -1,0 +1,12 @@
+rtl/rv32_pc.sv
+rtl/rv32_regfile.sv
+rtl/rv32_imm_ext.sv
+rtl/rv32_alu.sv
+rtl/rv32_adder.sv
+rtl/rv32_mux2.sv
+rtl/rv32_mux3.sv
+rtl/rv32_main_decoder.sv
+rtl/rv32_alu_decoder.sv
+rtl/rv32_controller.sv
+rtl/rv32_datapath.sv
+rtl/rv32_core.sv
