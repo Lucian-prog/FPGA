@@ -39,9 +39,18 @@ cnn_ram/
 # 打开 Vivado 工程（GUI）
 vivado "cnn_ram/Vivado/CM0_Proj/CM0_Proj.xpr"
 
-# 参考日志中的 batch 模式（按实际 tcl 路径）
+# 仅在确认 Tcl 脚本真实存在后使用 batch 模式
 vivado -mode batch -source CortexM0_SoC.tcl
 ```
+
+## VERIFICATION
+
+- 当前没有确认过的统一一键仿真或综合脚本，不得根据日志中的历史命令假装验证已经成功。
+- 修改 CNN RTL 后，先定位对应 Vivado source set、仿真顶层和 testbench，再执行 xsim 或 batch 流程。
+- 修改 Cortex-M0 外设、寄存器或内存映射后，必须同时检查 `CortexM0_SoC.v`、相关 RTL 地址译码和 Keil 固件头文件/访问代码。
+- 修改总线接口时检查地址宽度、数据宽度、读写时序、复位值和软件可见行为是否一致。
+- 验证输出应记录实际使用的顶层、脚本、命令和结果；未运行 Vivado/Keil 时明确标注为静态检查。
+- 若需要新增可复现流程，优先在源码目录维护 Tcl 或脚本，不从 `.runs/.cache/.sim` 中复制生成命令作为长期入口。
 
 ## NOTES
 - 该目录生成物密集，做知识检索时建议先过滤 `*.runs`, `*.cache`, `*.sim`。
