@@ -1,118 +1,135 @@
 `timescale 1ns/1ps
 //================================================================
-// top_pll_tb.v - PLL模块测试平台
-// 测试场景:
-//   1. 基础功能测试 - NCO频率控制
-//   2. 锁定测试 - PLL跟踪输入信号
-//   3. 频率跳变测试 - 跟踪频率变化
+// top_pll_tb.v - PLL 自检测试平台（重写版）
+// 修正原版问题：
+//   1. A 生成半周期/全周期混淆（原版 target=250 实际输出 99.6kHz）
+//   2. 无自动判定 → 增加锁定超时判定 + 频率读数容差检查 + PASS/FAIL 汇总
+//   3. locked 刷屏打印 → 仅状态变化时打印
+//   4. 不使用跨模块层次引用，避免工具兼容性问题
+// 测试场景：200kHz 初始锁定 → 跳变 220/240/180kHz 各检查重锁与读数
 //================================================================
 module top_pll_tb;
 
-    // 时钟和复位
+    // 测量窗口缩短（原 100ms 窗口仿真太慢，2ms 窗口精度 0.25% 足够）
+    localparam MEAS_CYCLES_TB = 32'd100_000;
+    // 一个测量窗口的时长（ns）= MEAS_CYCLES * 20ns
+    localparam WIN_NS = MEAS_CYCLES_TB * 20;
+
     reg        sys_clk;
     reg        reset;
-    
-    // 参考信号输入
     reg        A;
-    
-    // 输出
     wire       B;
     wire [31:0] freq;
     wire       locked;
     wire [31:0] phase_out;
-    
-    // 时钟生成 (50MHz)
+
+    // 时钟 50MHz
+    initial sys_clk = 1'b0;
+    always #10 sys_clk = ~sys_clk;
+
+    // 参考信号 A：以半周期 clk 数生成（修正：半周期 125 clk = 200kHz）
+    reg  [31:0] a_half_clks;
+    integer     a_cnt;
     initial begin
-        sys_clk = 0;
-        forever #10 sys_clk = ~sys_clk;  // 20ns周期 = 50MHz
+        a_half_clks = 32'd125;  // 200kHz：半周期 125 clk
+        a_cnt = 0;
+        A = 1'b0;
     end
-    
-    // 参考信号A生成 (可调频率)
-    reg [31:0] a_period_count;
-    reg [31:0] a_period_target;
-    
-    initial begin
-        a_period_target = 32'd250;  // 初始: 50MHz/250 = 200kHz
-        a_period_count = 0;
-        A = 0;
-    end
-    
     always @(posedge sys_clk) begin
-        a_period_count <= a_period_count + 1;
-        if (a_period_count >= a_period_target) begin
+        if (a_cnt >= a_half_clks - 1) begin
+            a_cnt <= 0;
             A <= ~A;
-            a_period_count <= 0;
+        end else begin
+            a_cnt <= a_cnt + 1;
         end
     end
-    
-    // 实例化DUT
-    top_pll uut (
-        .sys_clk    (sys_clk),
-        .reset      (reset),
-        .A          (A),
-        .B          (B),
-        .freq       (freq),
-        .locked     (locked),
-        .phase_out  (phase_out)
+
+    // DUT
+    top_pll #(
+        .MEAS_CYCLES (MEAS_CYCLES_TB)
+    ) uut (
+        .sys_clk   (sys_clk),
+        .reset     (reset),
+        .A         (A),
+        .B         (B),
+        .freq      (freq),
+        .locked    (locked),
+        .phase_out (phase_out)
     );
-    
-    // 测试控制
+
+    // locked 状态变化打印（避免刷屏）
+    reg locked_d;
+    always @(posedge sys_clk) begin
+        locked_d <= locked;
+        if (locked != locked_d)
+            $display("[%0t ns] locked -> %b (freq=%0d Hz)", $time, locked, freq);
+    end
+
+    // 结果统计
+    integer errors;
+
+    // 任务：等待锁定并检查频率读数（容差 3%）
+    task check_lock(input [31:0] expect_hz, input integer timeout_ms);
+        integer waited;
+        begin
+            waited = 0;
+            while (locked !== 1'b1 && waited < timeout_ms) begin
+                #1_000_000; // 1ms 步进等待
+                waited = waited + 1;
+            end
+            if (locked !== 1'b1) begin
+                errors = errors + 1;
+                $display("[FAIL] %0d Hz: not locked within %0d ms", expect_hz, timeout_ms);
+            end else begin
+                // 连续等两个测量窗口：第一个窗口可能跨越频率跳变时刻，
+                // freq_out 是窗口结束才锁存的保持值，需丢弃后读纯窗口
+                #(2 * WIN_NS);
+                if (freq > expect_hz + expect_hz/32 ||
+                    freq < expect_hz - expect_hz/32) begin
+                    errors = errors + 1;
+                    $display("[FAIL] %0d Hz: freq readback %0d Hz (err > 3%%)",
+                             expect_hz, freq);
+                end else begin
+                    $display("[PASS] %0d Hz: locked, readback %0d Hz",
+                             expect_hz, freq);
+                end
+            end
+        end
+    endtask
+
+    // 主流程
     initial begin
         $dumpfile("top_pll_tb.vcd");
         $dumpvars(0, top_pll_tb);
-        
-        // 初始化
-        reset = 1;
-        #100;
-        reset = 0;
-        #100;
-        
-        $display("========================================");
-        $display("PLL Test Start");
-        $display("========================================");
-        
-        // 测试1: 等待锁定
-        $display("[%0t] Wait for initial lock...", $time);
-        #500000;  // 10ms
-        
-        if (locked) begin
-            $display("[%0t] PLL Locked! Frequency = %0d Hz", $time, freq);
-        end else begin
-            $display("[%0t] PLL not locked yet", $time);
-        end
-        
-        // 测试2: 频率跳变 - 增加到220kHz
-        $display("[%0t] Frequency jump to 220kHz...", $time);
-        a_period_target = 32'd227;  // 50MHz/227 ≈ 220kHz
-        #1000000;  // 20ms
-        
-        if (locked) begin
-            $display("[%0t] Re-locked! Frequency = %0d Hz", $time, freq);
-        end
-        
-        // 测试3: 频率跳变 - 增加到240kHz
-        $display("[%0t] Frequency jump to 240kHz...", $time);
-        a_period_target = 32'd208;  // 50MHz/208 ≈ 240kHz
-        #1000000;
-        
-        // 测试4: 频率跳变 - 降低到180kHz
-        $display("[%0t] Frequency jump to 180kHz...", $time);
-        a_period_target = 32'd278;  // 50MHz/278 ≈ 180kHz
-        #1000000;
-        
-        $display("========================================");
-        $display("PLL Test Complete");
-        $display("========================================");
-        
-        #100000;
+
+        reset  = 1'b1;
+        errors = 0;
+        #200;
+        reset  = 1'b0;
+        $display("[%0t ns] PLL Test Start (A = 200kHz)", $time);
+
+        // 场景 1：初始锁定 200kHz
+        check_lock(32'd200_000, 8);
+
+        // 场景 2~4：频率跳变
+        $display("[%0t ns] Jump to 220kHz", $time);
+        a_half_clks = 32'd114;  // 50MHz/114/2 ≈ 219.3kHz
+        check_lock(32'd220_000, 8);
+
+        $display("[%0t ns] Jump to 240kHz", $time);
+        a_half_clks = 32'd104;  // 50MHz/104/2 ≈ 240.4kHz
+        check_lock(32'd240_000, 8);
+
+        $display("[%0t ns] Jump to 180kHz", $time);
+        a_half_clks = 32'd139;  // 50MHz/139/2 ≈ 179.9kHz
+        check_lock(32'd180_000, 8);
+
+        // 汇总
+        if (errors == 0)
+            $display("\n==== ALL TESTS PASS ====");
+        else
+            $display("\n==== %0d TEST(S) FAILED ====", errors);
         $finish;
-    end
-    
-    // 监控输出
-    always @(posedge sys_clk) begin
-        if (locked && ($time > 1000000)) begin
-            $display("[%0t] Locked! B=%b, Freq=%0d Hz", $time, B, freq);
-        end
     end
 
 endmodule

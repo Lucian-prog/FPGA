@@ -1,109 +1,101 @@
 `timescale 1ns/1ps
 //================================================================
-// Phase Detector - 相位检测器
-// 使用Type-II鉴相器(JK触发器型)，检测A和B的相位差
-// 输出为有符号误差：正值表示B落后于A，负值表示B超前于A
+// phase_detector - 频相联合检测器 PFD（重写版，三态电荷泵语义）
+// 原理：对 A/B 上升沿做事件配对，输出两沿间隔（clk 数）为误差：
+//         A↑ 先到 → B 滞后，误差 = +(A↑→B↑ 间隔)
+//         B↑ 先到 → B 超前，误差 = -(B↑→A↑ 间隔)
+//         同拍到  → 误差 = 0
+// 频率捕获：频差大时误差单向饱和偏移（而非线性鉴相器的锯齿混叠），
+//           积分项持续单向积累，自动扫频入锁
+// 原版问题：仅 ±100 两档判决，等效 1-bit 量化，环路无法平滑收敛
 //================================================================
 module phase_detector(
-    input  wire        clk,        // 系统时钟（50MHz）
-    input  wire        reset,      // 异步复位
-    input  wire        A,          // 外部输入参考信号
-    input  wire        B,          // NCO输出信号
-    output reg  signed [15:0] phase_error  // 相位误差输出
+    input  wire        clk,          // 系统时钟（50MHz）
+    input  wire        reset,        // 异步复位，高有效
+    input  wire        A,            // 参考输入（180~240kHz，与 clk 异步）
+    input  wire        B,            // NCO 反馈输出（同属 clk 域）
+    output reg  signed [15:0] phase_error, // 相位误差（单位：clk 周期数）
+    output reg         error_valid   // 误差有效脉冲（每次沿配对更新一次）
 );
 
-    // 两级同步器，避免亚稳态
-    reg A_sync1, A_sync2;
-    reg B_sync1, B_sync2;
-    
-    // 边沿检测
-    reg A_prev, B_prev;
-    
-    // 脉冲计数器，用于积分型鉴相
-    reg [7:0] pulse_count;
-    reg       counting;
-    
-    // 状态机
-    localparam IDLE    = 2'b00;
-    localparam COUNT   = 2'b01;
-    localparam HOLD    = 2'b10;
-    
-    reg [1:0] state, next_state;
-    
-    // 同步A信号到系统时钟域
+    // A 输入两级同步，避免亚稳态
+    reg A_sync1, A_sync2, A_prev;
+    // B 打拍取沿（B 与 clk 同源，无需多级同步）
+    reg B_d;
+
+    wire a_rise = ~A_prev & A_sync2;
+    wire b_rise = ~B_d    & B;
+
+    // 沿配对标志：等待对方的沿
+    reg a_wait, b_wait;
+    // 沿间隔计数（16 位饱和，正常 A 周期 ~250 clk 不会计满）
+    reg [15:0] evt_cnt;
+
+    // 频率捕获尖峰幅值（略大于最大 A 周期 278 clk @ 180kHz）
+    localparam signed [15:0] SLIP_ERR = 16'sd300;
+
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            A_sync1 <= 1'b0;
-            A_sync2 <= 1'b0;
+            A_sync1     <= 1'b0;
+            A_sync2     <= 1'b0;
+            A_prev      <= 1'b0;
+            B_d         <= 1'b0;
+            a_wait      <= 1'b0;
+            b_wait      <= 1'b0;
+            evt_cnt     <= 16'd0;
+            phase_error <= 16'sd0;
+            error_valid <= 1'b0;
         end else begin
             A_sync1 <= A;
             A_sync2 <= A_sync1;
-        end
-    end
-    
-    // 同步B信号到系统时钟域
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            B_sync1 <= 1'b0;
-            B_sync2 <= 1'b0;
-        end else begin
-            B_sync1 <= B;
-            B_sync2 <= B_sync1;
-        end
-    end
-    
-    // 边沿检测和状态机
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            A_prev      <= 1'b0;
-            B_prev      <= 1'b0;
-            pulse_count <= 8'd0;
-            counting    <= 1'b0;
-            state       <= IDLE;
-            phase_error <= 16'sd0;
-        end else begin
-            A_prev <= A_sync2;
-            B_prev <= B_sync2;
-            
-            case (state)
-                IDLE: begin
-                    // 检测A的上升沿开始计数
-                    if (~A_prev & A_sync2) begin
-                        state <= COUNT;
-                        counting <= 1'b1;
-                        pulse_count <= 8'd0;
-                    end
+            A_prev  <= A_sync2;
+            B_d     <= B;
+            error_valid <= 1'b0;
+
+            // 沿间隔计数（防溢出停表）
+            if (&evt_cnt == 1'b0)
+                evt_cnt <= evt_cnt + 16'd1;
+
+            if (a_rise && b_rise) begin
+                // 两沿同拍：已对齐
+                phase_error <= 16'sd0;
+                error_valid <= 1'b1;
+                a_wait      <= 1'b0;
+                b_wait      <= 1'b0;
+                evt_cnt     <= 16'd0;
+            end else if (a_rise) begin
+                if (b_wait) begin
+                    // B 沿先到：B 超前，误差为负（B→A 间隔）
+                    phase_error <= -$signed({1'b0, evt_cnt});
+                    error_valid <= 1'b1;
+                    b_wait      <= 1'b0;
+                end else if (a_wait) begin
+                    // 等待 B 期间又见 A 沿：B 滞后已超一个 A 周期，
+                    // 输出饱和正误差（频率捕获尖峰），继续等待 B
+                    phase_error <= SLIP_ERR;
+                    error_valid <= 1'b1;
+                    evt_cnt     <= 16'd0;
+                end else begin
+                    a_wait <= 1'b1;          // A 先到，等待 B
                 end
-                
-                COUNT: begin
-                    if (counting) begin
-                        // 在B的每个周期累加
-                        if (~B_prev & B_sync2) begin
-                            pulse_count <= pulse_count + 1'b1;
-                        end
-                        // A下降沿停止计数
-                        if (A_prev & ~A_sync2) begin
-                            counting <= 1'b0;
-                            state <= HOLD;
-                        end
-                    end
+                evt_cnt <= 16'd0;
+            end else if (b_rise) begin
+                if (a_wait) begin
+                    // A 沿先到：B 滞后，误差为正（A→B 间隔）
+                    phase_error <= $signed({1'b0, evt_cnt});
+                    error_valid <= 1'b1;
+                    a_wait      <= 1'b0;
+                end else if (b_wait) begin
+                    // 等待 A 期间又见 B 沿：B 超前已超一个 A 周期，
+                    // 输出饱和负误差（频率捕获尖峰），继续等待 A
+                    phase_error <= -SLIP_ERR;
+                    error_valid <= 1'b1;
+                    evt_cnt     <= 16'd0;
+                end else begin
+                    b_wait <= 1'b1;          // B 先到，等待 A
                 end
-                
-                HOLD: begin
-                    // 计算误差：基于A周期内B的上升沿数量
-                    // 如果B频率高于A，计数大，误差为正(B落后)
-                    // 如果B频率低于A，计数小，误差为负(B超前)
-                    if (pulse_count >= 8'd1) begin
-                        // B周期数 >= 1，表示B频率高于或接近A
-                        phase_error <= 16'sd100;  // 正向误差
-                    end else begin
-                        phase_error <= -16'sd100; // 负向误差
-                    end
-                    state <= IDLE;
-                end
-                
-                default: state <= IDLE;
-            endcase
+                evt_cnt <= 16'd0;
+            end
         end
     end
 
