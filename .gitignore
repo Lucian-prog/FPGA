@@ -46,6 +46,6 @@ cnn_ram/Keil/Keil_proj/OBJ/
 rtl-agent/
 _K3_review/
 node_modules/
-.venv/
+.venv*/
 .rtl-agent/
-work/
+work
