@@ -101,7 +101,7 @@ FPGA/
 
 - APB 有效 ACCESS 阶段必须使用 `PSEL && PENABLE` 判定，不能仅使用 `PSEL`。
 - `17. apb/apb_slave.v` 是无等待周期示例：`PREADY=1`，`PSLVERR` 仅在 ACCESS 阶段有效。
-- `18. 2025-fpga-anlogic-audio` 包含独立 `.git`；进入后先阅读其 README 和本地约定。
+- `18. 2025-fpga-anlogic-audio` 已作为普通目录纳入本仓库；竞赛原仓库（github.com/Lucian-prog/2025-fpga-anlogic-audio-solution）保留独立历史，进入后先阅读其 README。
 - `cnn_ram` 的寄存器或内存映射修改必须同步检查 RTL 与 Keil 固件。
 
 ## GENERATED FILES AND SEARCH BOUNDARIES

@@ -1,0 +1,17 @@
+read_verilog -sv -formal -overwrite {workspace}/al_ip/pll.v
+read_verilog -sv -formal -overwrite {workspace}/src/clkdiv.v
+read_verilog -sv -formal -overwrite {workspace}/src/ES8388_Init.v
+read_verilog -sv -formal -overwrite {workspace}/src/I2C_Init_Dev.v
+read_verilog -sv -formal -overwrite {workspace}/src/ES8388_init_table.v
+read_verilog -sv -formal -overwrite {workspace}/src/i2c_control.v
+read_verilog -sv -formal -overwrite {workspace}/src/i2c_bit_shift.v
+read_verilog -sv -formal -overwrite {workspace}/src/key_filter.v
+read_verilog -sv -formal -overwrite {workspace}/src/pdm2pcm_lfrg.v
+read_verilog -sv -formal -overwrite {workspace}/src/cic_filter.v
+read_verilog -sv -formal -overwrite {workspace}/src/i2s_tx.v
+read_verilog -sv -formal -overwrite {workspace}/src/async_fifo.v
+read_verilog -sv -formal -overwrite {workspace}/src/async_fifo_ctrl.v
+read_verilog -sv -formal -overwrite {workspace}/src/dpram.v
+read_verilog -sv -formal -overwrite {workspace}/src/PDM_ES8388_System.v
+synth -run coarse;
+write_json {workspace}/netlist/PDM_ES8388_System.json

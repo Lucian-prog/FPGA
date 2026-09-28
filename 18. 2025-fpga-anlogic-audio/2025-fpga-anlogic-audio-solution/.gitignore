@@ -1,0 +1,29 @@
+# Anlogic / Tang Dynasty IDE
+*.gprj.user
+*.mode
+*.db
+*.history
+*.log
+*.jou
+*.rdb
+
+# Compilation / Implementation results
+impl/temp/
+impl/gwsynthesis/
+impl/pnr/
+!impl/pnr/*.bit
+!impl/pnr/*.bin
+!impl/pnr/*.fs
+
+# Simulation
+sim/work/
+*.vcd
+*.fsdb
+
+# Project specific runs
+*_Runs/
+*/work/
+
+# Python
+__pycache__/
+*.pyc
