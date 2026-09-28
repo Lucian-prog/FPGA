@@ -2,7 +2,7 @@
 
 ## OVERVIEW
 
-个人 FPGA 与数字 IC 前端学习仓库，主体为 `01`～`19` 编号递进的 Verilog/SystemVerilog 练习模块；同时包含竞赛项目 `18. 2025-fpga-anlogic-audio` 与 `cnn_ram` 软硬件协同工程。
+个人 FPGA 与数字 IC 前端学习仓库，主体为 `01`～`23` 编号递进的 Verilog/SystemVerilog/Cocotb 练习模块；同时包含竞赛项目 `18. 2025-fpga-anlogic-audio`、`cnn_ram` 软硬件协同工程，以及 `Bagu`/`uvm_learn` 两个专题学习目录。
 
 ## STRUCTURE
 
@@ -11,10 +11,18 @@ FPGA/
 ├── 01. mux2 ... 17. apb/        # Verilog 学习主线
 ├── 18. 2025-fpga-anlogic-audio/ # 安路音频竞赛项目（独立子体系）
 ├── 19. SV_Blocks/               # SystemVerilog 模块练习
+├── 20. RV32I_Core/              # RISC-V 五级流水处理器
+├── 21. AMBA_Bus/                # AHB-Lite / AXI-Lite 从机练习
+├── 22. dma_ctrl/                # AXI DMA 控制器（RTL+TB+SVA）
+├── 23. cocotb/                  # Cocotb Python 协同仿真入门
+├── Bagu/                        # 面试手撕练习（复位同步/时钟切换/FIFO/握手）
+├── uvm_learn/                   # 《UVM实战》学习仓（VCS 实跑）
 ├── cnn_ram/                     # Cortex-M0 + CNN 工程（Vivado/Keil）
-├── portfolio/                   # 作品集与验证计划文档
 └── README.md                    # 总入口
 ```
+
+> `rtl-agent/` 是带独立 `.git` 的自研 Python 工具仓，`_K3_review/` 为一次性评审材料，
+> 两者连同各 EDA 生成物目录均已被根 `.gitignore` 排除，不属于仓库内容。
 
 ## WHERE TO LOOK
 
@@ -23,7 +31,11 @@ FPGA/
 | 新建学习模块 | `0X. */`、`19. SV_Blocks/` | 默认 `module.v + module_tb.v (+ .xdc)` |
 | APB 学习/调试 | `17. apb/` | `apb_slave.v` + `APB_Protocol_Guide.md` |
 | 异步 FIFO/CDC | `16. async_fifo/` | 包含 FIFO、脉冲同步与 CDC 学习内容 |
-| 仿真基线 | `portfolio/week0-baseline.md` | `iverilog/vvp/gtkwave` 参考 |
+| RISC-V 处理器 | `20. RV32I_Core/` | `filelist.f` + `scripts/run_all.ps1` |
+| AMBA 从机 | `21. AMBA_Bus/` | AHB-Lite/AXI-Lite 从机 + `AMBA_总线协议详解.md` |
+| DMA 控制器 | `22. dma_ctrl/` | `scripts/run.sh`（VCS）+ SVA 全绿 |
+| Cocotb 入门 | `23. cocotb/` | `counter/` 示例 + 入门学习指南 |
+| 面试手撕 | `Bagu/` | 每个子目录 RTL+TB+README |
 | 安路音频项目 | `18. 2025-fpga-anlogic-audio/` | 先读该目录的 `README.md` |
 | Vivado 工程入口 | `cnn_ram/Vivado/CM0_Proj/CM0_Proj.xpr` | 遵守 `cnn_ram/AGENTS.md` |
 
@@ -95,6 +107,7 @@ FPGA/
 ## GENERATED FILES AND SEARCH BOUNDARIES
 
 - 不把 `*.vcd`、`*.vvp`、`*.log`、`*.jou`、`*.db`、`*.bit`、`*.dcp` 当作源码修改目标。
+- 上述生成物已由根 `.gitignore` 排除出版本控制，本地文件保留，无需手动清理。
 - 不手工修改 `.Xil/`、`*.runs/`、`*.cache/`、`*.sim/`、`.venv/` 中的生成文件。
 - 遍历 Vivado 工程时优先定位 `*.srcs` 源码目录，避免无边界递归生成物目录。
 - 目录名含空格与中文，PowerShell 和脚本命令中的路径必须完整加引号。
