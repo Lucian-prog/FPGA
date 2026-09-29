@@ -1,5 +1,5 @@
 `timescale 1ps/1ps
-module top(
+module handshake_top(
   input wire clka,
   input wire clkb,
   input wire rst_n,

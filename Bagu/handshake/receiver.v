@@ -19,7 +19,7 @@ module receiver(
     end
   end  
   
-  reg data_r;
+  reg [7:0] data_r;
   always@(posedge clkb or negedge rst_n)begin
     if(!rst_n)begin
       data_r<=0;
@@ -29,7 +29,11 @@ module receiver(
       data_r<=data_tx;
       ack<=1;
     end
+    else if(!req_sync1&&ack)begin
+      ack<=0;
+    end
     else begin
+      ack<=ack;
       data_r<=data_r;
     end
   end
