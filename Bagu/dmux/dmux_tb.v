@@ -11,8 +11,8 @@ parameter PERIOD2 = 5;
   reg  rst_n;
   reg  valid;
   reg  clk_dst;
-  reg  data_in;
-  wire data_out;
+  reg  [7:0]data_in;
+  wire [7:0]data_out;
 
   dmux dmux_inst (
     .clk_src(clk_src),

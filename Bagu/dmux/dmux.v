@@ -19,7 +19,7 @@ module dmux(
 
   always @(posedge clk_dst or negedge rst_n) begin
     if (!rst_n) begin
-      data_out <= 1'b0;
+      data_out <= 8'h00;
     end else if (valid_sync1) begin
       data_out <= data_in;
     end
