@@ -18,14 +18,21 @@ module i2s_receive (
 
 //0.clk_ws下降沿采集
 reg ws_d0,ws_d1;
+// WS 检测和位计数使取数窗口晚两拍，SD 同步延迟两拍以对齐 MSB。
+// 这里是 BCLK 域内的数据流水线，不是跨域同步器。
+reg [3:0] data_d0, data_d1;
 always @(posedge clk_3m or negedge rst_n) begin
     if (!rst_n) begin
         ws_d0 <= 1'b0;
         ws_d1 <= 1'b0;
+        data_d0 <= 4'b0000;
+        data_d1 <= 4'b0000;
     end
     else begin
         ws_d1 <= clk_ws;
         ws_d0 <= ws_d1;//d0为旧，d1为新
+        data_d0 <= data;
+        data_d1 <= data_d0;
     end
 end
 wire neg_clk_ws;
@@ -82,15 +89,15 @@ always @(posedge clk_3m or negedge rst_n) begin
         R_data_7 <= 32'd0;  //新增
     end
     else if(b_cnt >= 6'd1 && b_cnt <= 6'd32) begin
-        L_data_1[32-b_cnt] <= data[0];
-        L_data_3[32-b_cnt] <= data[1];
-        L_data_5[32-b_cnt] <= data[2];
+        L_data_1[32-b_cnt] <= data_d1[0];
+        L_data_3[32-b_cnt] <= data_d1[1];
+        L_data_5[32-b_cnt] <= data_d1[2];
     end
     else if(b_cnt >= 6'd33 && b_cnt <= 6'd63) begin
-        R_data_2[64-b_cnt] <= data[0];
-        R_data_4[64-b_cnt] <= data[1];
-        R_data_6[64-b_cnt] <= data[2];
-        R_data_7[64-b_cnt] <= data[3];  //新增：采集data[3]
+        R_data_2[64-b_cnt] <= data_d1[0];
+        R_data_4[64-b_cnt] <= data_d1[1];
+        R_data_6[64-b_cnt] <= data_d1[2];
+        R_data_7[64-b_cnt] <= data_d1[3];  //新增：采集data[3]
     end
 end
 
