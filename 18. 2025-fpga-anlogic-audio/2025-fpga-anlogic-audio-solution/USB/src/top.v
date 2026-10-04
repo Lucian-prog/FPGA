@@ -99,8 +99,8 @@ module top (
   wire signed [23:0] mic_0, mic_1, mic_2, mic_3, mic_4, mic_5,mic_6;
   wire mic_finished_left, mic_finished_right;
   wire mic_start;
-
-  reg  es8388_data_valid;         // ES8388 数据有效信号（持续有效）
+  wire signed [15:0] mic_frame_l, mic_frame_r;
+  wire mic_frame_valid;
 
   // USB音频数据
   wire        audio_en;           // 48kHz采样脉冲
@@ -199,36 +199,11 @@ module top (
                .mic_6              (mic_6),
                .finished_left1     (mic_finished_left),
                .finished_right1    (mic_finished_right),
-               .start              (mic_start)
+               .start              (mic_start),
+               .frame_l            (mic_frame_l),
+               .frame_r            (mic_frame_r),
+               .frame_valid        (mic_frame_valid)
              );
-
-  //================================================================================
-  // ES8388 数据有效信号生成 - 仅在普通模式下有效
-  //================================================================================
-  // 说明：mic_finished_left 是脉冲信号，在 i2s_bclk 域容易错过
-  //       这里生成一个持续有效的信号，在麦克风启动后始终为高
-  //       在声源定位模式下，关闭ES8388输出
-  always @(posedge clk50mhz or negedge rst_n)
-  begin
-    if (!rst_n)
-    begin
-      es8388_data_valid <= 1'b0;
-    end
-    else
-    begin
-      if (work_mode)
-      begin
-        // 声源定位模式：关闭ES8388
-        es8388_data_valid <= 1'b0;
-      end
-      else if (mic_start)
-      begin
-        // 普通模式：麦克风启动后，数据持续有效
-        es8388_data_valid <= 1'b1;
-      end
-    end
-  end
-
 
   //================================================================================
   // 声源定位 (互相关计算 × 3) - 仅在声源定位模式下工作
@@ -297,6 +272,15 @@ module top (
   wire tVAD;
   wire signed [15:0] audio_l_process;
   wire signed [15:0] audio_r_process;
+  wire audio_process_valid, audio_process_ready;
+  // 调试粘滞位：当前算法约 8 拍完成，输入间隔约 1024 拍。
+  // 用于仿真/调试观察；未接外部端口时综合可能优化掉此寄存器。
+  reg audio_input_overrun;
+  always @(posedge clk50mhz or negedge rst_n) begin
+    if (!rst_n) audio_input_overrun <= 1'b0;
+    else if (mic_frame_valid && !audio_process_ready)
+      audio_input_overrun <= 1'b1;
+  end
  
   AUDIO_PROCESS audio_lite(
                   .rst_n(rst_n),
@@ -306,10 +290,13 @@ module top (
                   .sw3(sw3),
                   .sw4(sw4),
                   .sw5(sw5),
-                  .audio_r(mic_0[23:8]),
-                  .audio_l(mic_1[23:8]),
+                  .audio_r(mic_frame_r),
+                  .audio_l(mic_frame_l),
                   .audio_ref(16'd13000),
-                  .data_async(I2S_RCLK),
+                  .clk(clk50mhz),
+                  .in_valid(mic_frame_valid),
+                  .in_ready(audio_process_ready),
+                  .out_valid(audio_process_valid),
                   .o_audio_r(audio_r_process),
                   .o_audio_l(audio_l_process),
                   .tVAD(tVAD)
@@ -368,11 +355,11 @@ module top (
       dacfifo_write <= 1'd0;
       dacfifo_writedata <= 32'd0;
     end
-    else if( es8388_data_valid && ~dacfifo_full && Init_Done && ~work_mode)
+    else if( audio_process_valid && ~dacfifo_full && Init_Done && ~work_mode)
     begin
-      // 仅在普通模式(work_mode=0)下写入FIFO
+      // 每份新算法结果只写一次；采样率长期不匹配仍需输出端处理。
       dacfifo_write <= 1'd1;
-      // 将16位PCM数据扩展为32位立体声数据（左右声道相同）
+      // 将左右声道两个 16 位样本拼成一份 32 位数据。
       dacfifo_writedata <= {audio_l_es8388, audio_r_es8388};
     end
     else

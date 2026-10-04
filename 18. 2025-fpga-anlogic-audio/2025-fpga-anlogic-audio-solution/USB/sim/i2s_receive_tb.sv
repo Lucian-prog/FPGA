@@ -6,6 +6,8 @@ module i2s_receive_tb;
   reg [3:0] sd = 4'b0000;
   wire bclk, ws, finished_left, finished_right, start;
   wire signed [23:0] mic [0:6];
+  wire signed [15:0] frame_l, frame_r, processed_l, processed_r;
+  wire frame_valid, process_ready, process_valid;
 
   always #10 clk = ~clk;
 
@@ -16,7 +18,16 @@ module i2s_receive_tb;
     .mic_0(mic[0]), .mic_1(mic[1]), .mic_2(mic[2]),
     .mic_3(mic[3]), .mic_4(mic[4]), .mic_5(mic[5]),
     .mic_6(mic[6]), .finished_left1(finished_left),
-    .finished_right1(finished_right), .start(start)
+    .finished_right1(finished_right), .start(start),
+    .frame_l(frame_l), .frame_r(frame_r), .frame_valid(frame_valid)
+  );
+
+  AUDIO_PROCESS audio_dut (
+    .clk(clk), .rst_n(rst_n), .in_valid(frame_valid), .in_ready(process_ready),
+    .out_valid(process_valid), .audio_l(frame_l), .audio_r(frame_r),
+    .audio_ref(16'sd13000), .sw0(1'b0), .sw1(1'b0), .sw2(1'b0),
+    .sw3(1'b0), .sw4(1'b0), .sw5(1'b0),
+    .o_audio_l(processed_l), .o_audio_r(processed_r), .tVAD()
   );
 
   reg last_ws = 1'b0;
@@ -27,6 +38,11 @@ module i2s_receive_tb;
   integer checks = 0, errors = 0;
   integer left_events = 0, right_events = 0;
   integer previous_left, previous_right;
+  integer frame_checks = 0, process_checks = 0, last_frame = -1;
+  integer previous_frames, previous_processed;
+  reg frame_valid_previous = 0, process_pending = 0;
+  reg [15:0] pending_l, pending_r;
+  reg [23:0] expected_frame_l, expected_frame_r;
   integer tx_delay;
   reg [23:0] left_word [0:3];
   reg [23:0] right_word [0:3];
@@ -54,6 +70,39 @@ module i2s_receive_tb;
       sample_word = value ^ (channel * 24'h010123);
     end
   endfunction
+
+  // 从第一个完整帧开始检查，不能依靠丢弃三帧来掩盖启动配对错误。
+  always @(negedge rst_n) begin
+    last_frame = -1;
+    frame_valid_previous = 0;
+    process_pending = 0;
+  end
+  always @(posedge clk) begin
+    if (rst_n) begin
+      if (frame_valid) begin
+        if (frame_valid_previous || right_id != last_frame + 1)
+          $fatal(1, "Duplicate, missing, or startup-invalid frame id=%0d last=%0d", right_id, last_frame);
+        expected_frame_l = sample_word(right_id, 1);
+        expected_frame_r = sample_word(right_id, 0);
+        if (frame_l !== expected_frame_l[23:8] || frame_r !== expected_frame_r[23:8])
+          $fatal(1, "Mismatched stereo frame id=%0d got=%h/%h expected=%h/%h",
+                 right_id, frame_l, frame_r, expected_frame_l[23:8], expected_frame_r[23:8]);
+        if (!process_ready || process_pending) $fatal(1, "Audio processing overrun");
+        pending_l = frame_l;
+        pending_r = frame_r;
+        process_pending = 1;
+        last_frame = right_id;
+        frame_checks = frame_checks + 1;
+      end
+      if (process_valid) begin
+        if (!process_pending || processed_l !== pending_l || processed_r !== pending_r)
+          $fatal(1, "End-to-end bypass sample mismatch");
+        process_checks = process_checks + 1;
+        process_pending = 0;
+      end
+      frame_valid_previous = frame_valid;
+    end
+  end
 
   // 独立发送模型只观察引脚 WS，不读取 DUT 的 b_cnt。
   // WS 切换的下降沿为位置 0；下一下降沿的位置 1 发送 MSB。
@@ -139,15 +188,20 @@ module i2s_receive_tb;
       previous_checks = checks;
       previous_left = left_events;
       previous_right = right_events;
+      previous_frames = frame_checks;
+      previous_processed = process_checks;
       rst_n = 1'b0;
       #1003;
       rst_n = 1'b1;
       wait (frame_id == 103);
-      #1000;
+      #2000;
       if (checks - previous_checks != 700 ||
           left_events - previous_left != 100 ||
           right_events - previous_right != 100)
         $fatal(1, "Missing or duplicate sample events after frame alignment");
+      if (frame_checks - previous_frames != 103 ||
+          process_checks - previous_processed != 103)
+        $fatal(1, "Missing paired frames or processed outputs");
       // 下一轮从一帧中途复位，并改变发送端传播延迟。
       repeat (9) @(posedge bclk);
       #7;
@@ -157,6 +211,8 @@ module i2s_receive_tb;
     if (errors != 0)
       $fatal(1, "PCM samples are not bit-exact");
     $display("PASS: bit-exact PCM across all seven channels and reset recovery");
+    $display("PASS: stereo frames=%0d processed=%0d; first complete frame, no duplicates, end-to-end bypass",
+             frame_checks, process_checks);
     $finish;
   end
 
